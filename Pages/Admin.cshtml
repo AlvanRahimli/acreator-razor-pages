@@ -1,0 +1,49 @@
+@page "/admin"
+@model AdminModel
+
+@{
+    ViewData["Title"] = "ADMIN PANEL";
+    string token = "\"" + HttpContext.Session.GetString("token") + "\"";
+}
+<section class="bg-white inner-banner pages">
+    <div class="container pad-container">
+        <div class="col-md-12">
+            <h1 class="text-center contacttitle">@ViewData["Title"]</h1>
+            <h3 class="text-center contacttext">Buradan verilənlər bazasını idarə edə bilərsiniz.</h3>
+        </div>
+    </div>
+</section>
+
+<div class="col-lg-4 col-md-6 col-sm-12">
+    <form method="post" onsubmit="return false;" enctype="multipart/form-data">
+        <label for="name">Produkt adi:</label>
+        <input type="text" name="name" id="name">
+
+        <label for="price">Qiymet: (qepikle)</label>
+        <input type="number" name="price" id="price">
+
+        <label for="type">Tip:</label>
+        <select name="type" id="type">
+            <option value="0">Metlax</option>
+            <option value="1">Seramik</option>
+            <option value="2">Qranit</option>
+        </select>
+
+        <label for="wid">En: (santimetr)</label>
+        <input type="number" name="width" id="wid">
+
+        <label for="hei">Uzunluq: (santimetr)</label>
+        <input type="number" name="height" id="hei">
+        
+        <label for="img">Foto: </label>
+        <input type="file" asp-for="Image" id="img">
+
+        <input type="submit" onclick="newProduct()" value="Elave et!">
+    </form>
+</div>
+
+<br>
+<button onclick="logout()" style="width: 150px;" class="text-center">Çıxış et</button>
+<br>
+<script src="js/axios.min.js"></script>
+<script src="js/product_crud.js"></script>

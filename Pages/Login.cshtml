@@ -1,0 +1,29 @@
+@page "/login"
+@model LoginModel
+@{
+}
+
+<section class="bg-white inner-banner pages">
+
+<div class="container pad-container">
+    <div class="col-md-12">
+        <h1 class="text-center" id="status">HESABA DAXIL OL</h1>
+    </div>
+</div>
+
+</section>
+
+
+
+<form method="post" id="loginForm" onsubmit="login()">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" placeholder="Enter email">
+
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" placeholder="Enter password">
+
+    <input type="submit" value="Login">
+</form>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+<script src="js/login.js"></script>

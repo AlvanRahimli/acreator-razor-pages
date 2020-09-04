@@ -1,16 +1,7 @@
 @page "/products"
 @model ProductsModel
 @{
-    ViewData["Title"] = "MƏHSULLAR";
-    ViewData["products"] = "current";
     List<Product> products = ViewData["ReturnedProducts"] as List<Product>;
-        
-    @functions{
-        public void MakeOrder()
-        {
-
-        }
-    }
 }
 
             <!-- inner banner -->
@@ -19,7 +10,7 @@
     <div class="container pad-container">
         <div class="col-md-12">
             <h1 class="text-center shoptitle">@ViewData["Title"]</h1>
-            <h3 class="text-center shoptext">Məhsullarımızın arasından seçim edərək sifariş edə bilərsiniz.</h3>
+            <h3 class="text-center shoptext">@ViewData["Subtitle"]</h3>
         </div>
     </div>
 
@@ -33,16 +24,16 @@
         <div class="col-sm-12 content">
 
             <div class="product-grid col3">
-                @if (ViewData["Products"] != null)
+                @if (products != null)
                 @foreach (var product in products)
                 {
                     <div class="post brd0">
                         <figure>
-                            <a href="product-single3.html">
-                                <img src="@("http://localhost:5000/" + product.ImageUrl)"
+                            <a href="/product?id=@product.Id">
+                                <img id="pImage" src="@("https://www.acreator.az/" + product.ImageUrl)"
                                     alt="@product.Name" width="350" height="400"/> 
-                                </a>
-                                <a href="/order?id=@product.Id" class="btn right">Sifariş et</a>
+                            </a>
+                            <a href="/order?id=@product.Id" class="btn right">Sifariş et</a>
                         </figure>
                         <div class="post-content">
                             <h3><a href="product-single3.html">@product.Name</a></h3>
