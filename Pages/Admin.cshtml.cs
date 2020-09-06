@@ -16,49 +16,28 @@ namespace acreator_front.Pages
         public AdminModel(IHttpClientFactory clientFactory)
         {
             this._clientFactory = clientFactory;
-
         }
 
-        [BindProperty]
-        public IFormFile Image { get; set; }
-
-        public void OnGet()
+        public async Task OnGetAsync()
         {
-            ViewData["token"] = HttpContext.Session.GetString("token");
-        }
+            var client = _clientFactory.CreateClient("GetProductList");
 
-        public void OnPost()
-        {
-            // var form = Request.Form;
+            var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:5000/products/brief");
+            request.Headers.Add("Accept", "application/json");
 
-            // var client = _clientFactory.CreateClient();
-            // client.BaseAddress = new Uri("http://localhost:5000/");
-            // client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", HttpContext.Session.GetString("token"));
+            var response = await client.SendAsync(request);
 
-            // var newProduct = new ProductAddDto()
-            // {
-            //     Name = form["name"][0],
-            //     Price = int.Parse(form["price"][0]),
-            //     Image = Image,
-            //     Height = int.Parse(form["height"][0]),
-            //     Width = int.Parse(form["width"][0]),
-            //     Type = (ProductType)int.Parse(form["type"][0]),
-            //     ImageUrl = string.Empty
-            // };
+            if (response.IsSuccessStatusCode)
+            {
+                var data = await response.Content.ReadAsStringAsync();
+                var serialized = JsonConvert.DeserializeObject<BriefResponseModel>(data);
 
-            // var newProduct = new ProductAddDto();
-            // newProduct.Name = form["name"][0];
-            // newProduct.Price = Convert.ToInt32(form["price"][0]);
-            // newProduct.Image = form.
-            // newProduct.Height = Convert.ToInt32(form["height"][0]);
-            // newProduct.Width = Convert.ToInt32(form["width"][0]);
-            // newProduct.Type = (ProductType)Convert.ToInt32(form["type"][0]);
-
-            // var postTask = client.PostAsJsonAsync<ProductAddDto>("products/new", newProduct);
-            // postTask.Wait();
-            // var response = postTask.Result;
-
-            var response = HttpContext.Response;
+                ViewData["productList"] = serialized.Data;
+            }
+            else
+            {
+                ViewData["productList"] = null;
+            }
         }
     }
 }

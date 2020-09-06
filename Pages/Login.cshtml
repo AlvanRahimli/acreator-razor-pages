@@ -1,29 +1,67 @@
 @page "/login"
 @model LoginModel
 @{
+    Layout = null;
 }
 
-<section class="bg-white inner-banner pages">
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container pad-container">
-    <div class="col-md-12">
-        <h1 class="text-center" id="status">HESABA DAXIL OL</h1>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Login as admin</title>
+    <meta name="description" content="">
+    <meta name="keywords" content=" ">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css/login/style.css">
+    <link rel="stylesheet" href="~/css/login/bootstrap.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+</head>
+
+<body>
+    <!---->
+    <div class="form-bg">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6">
+                    <form class="form-horizontal" id="loginForm" method="post">
+                        <span class="heading">please login</span>
+                        <div class="form-group">
+                            <label class="control-label" for="email">your email</label>
+                            <input required="" name="email" type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="password">password</label>
+                            <input required="" name="password" id="password" type="password" class="form-control" >
+                        </div>
+                        <div class="form-group">
+
+                            <button type="submit" class="btn btn-default">login</button>
+                        </div>
+                        <div class="form-group">
+                            <a href="#" class="signup">Sign up</a>
+                            <a href="#" class="forgot-pass">Forgot password?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
-</section>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="~/js/login/jquery-3.2.1.slim.min.js"></script>
+    <script src="~/js/login/popper.js"></script>
+    <script src="~/js/login/bootstrap.min.js"></script>
+    <script src="~/js/login/inputs.js"></script>
+    <script src="~/js/axios.min.js"></script>
+    <script src="~/js/login.js"></script>
+</body>
 
-
-
-<form method="post" id="loginForm" onsubmit="login()">
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email" placeholder="Enter email">
-
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" placeholder="Enter password">
-
-    <input type="submit" value="Login">
-</form>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
-<script src="js/login.js"></script>
+</html>

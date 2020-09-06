@@ -1,0 +1,58 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+.btn-default
+{
+  background-color: #52AAD0;
+  color: white;
+}
+
+.btn-default:focus
+{
+  outline-width: none !important;
+}
+
+
+.button:focus
+{
+  outline: none !important;
+}
+
+.btn:focus{
+  outline: none !important;
+}
+
+.card-left-bg
+{
+  background-color: #3a3f44 !important;
+
+}
+
+.resetform
+{
+  cursor: pointer!important;
+}
+
+.resetform:focus
+{
+  outline: 0 !important;
+}
+
+.btn-primary:hover{
+  background-color: #3a3f44 !important;
+  color: white !important;
+  border-color:  #3a3f44 !important;
+}
+
+.bgcolor
+{
+  background-color: #3a3f44 !important;
+  height: 500px !important;
+}

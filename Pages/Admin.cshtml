@@ -1,49 +1,118 @@
 @page "/admin"
 @model AdminModel
-
 @{
     ViewData["Title"] = "ADMIN PANEL";
-    string token = "\"" + HttpContext.Session.GetString("token") + "\"";
+    Layout = null;
+    var products = ViewData["productList"] as List<IdNamePair>;
 }
-<section class="bg-white inner-banner pages">
-    <div class="container pad-container">
-        <div class="col-md-12">
-            <h1 class="text-center contacttitle">@ViewData["Title"]</h1>
-            <h3 class="text-center contacttext">Buradan verilənlər bazasını idarə edə bilərsiniz.</h3>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Məhsulları idarə edin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css/admin/style.css">
+    <link rel="stylesheet" href="~/css/admin/bootstrap.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mt-5 ">
+                <form method="post" enctype="multipart/form-data" id="cForm">
+                    <div class="form-group">
+                        <label for="name">Produkt adı</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Qiymət (qəpiklə) </label>
+                        <input type="number" class="form-control" id="price" >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="my-1 mr-2" for="type">Tip</label>
+                        <select class="custom-select form-control my-1 mr-sm-2" id="type">
+                            <option value="0">Metlax</option>
+                            <option value="1">Seramik</option>
+                            <option value="2">Qranit</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="width">En (santimetr) </label>
+                        <input type="number" class="form-control" id="width">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="height">Uzunluq (santimetr) </label>
+                        <input type="number" class="form-control" id="height">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="image"> Şəkil yüklə </label>
+                        <div class="input-group">
+                            <input type="file" name="image" id="image" placeholder="Şəkil yüklə..."/>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-5">
+                        <button type="submit" class="btn btn-primary form-control">Əlavə et</button>
+                    </div>
+
+                    <div class="form-group mt-1">
+                        <input class="btn btn-primary form-control resetform" type="reset" value="Formu silmək">
+                    </div>
+                </form>
+            </div>
+
+                <div class="col-lg-4 mt-5">
+                    <form action="post" id="deleteForm">
+                        <div class="form-group">
+                            <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Məhsulu sil</label>
+                            <select class="custom-select form-control my-1 mr-sm-2" id="pId">
+                                @foreach (var p in products)
+                                {
+                                    <option value="@p.Id">@p.Name</option>
+                                }
+                            </select>
+
+                        </div>
+                        <div class="form-group mt-2">
+                            <button type="submit" class="btn btn-primary form-control">Sil</button>
+                        </div>
+                    </form>
+
+                    <div class="card text-center">
+                        <h1>Əməliyyat tamamlandı.</h1>
+                    </div>
+
+
+                </div>
         </div>
+
+
+
     </div>
-</section>
 
-<div class="col-lg-4 col-md-6 col-sm-12">
-    <form method="post" onsubmit="return false;" enctype="multipart/form-data">
-        <label for="name">Produkt adi:</label>
-        <input type="text" name="name" id="name">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="~/js/admin/jquery-3.2.1.slim.min.js"></script>
+    <script src="~/js/admin/popper.js"></script>
+    <script src="~/js/admin/bootstrap.min.js"></script>
+    <script src="~/js/admin/inputs.js"></script>
+    <script src="~/js/admin/app.js"></script>
+    <script src="~/js/product_crud.js"></script>
+    <script src="~/js/axios.min.js"></script>
+</body>
 
-        <label for="price">Qiymet: (qepikle)</label>
-        <input type="number" name="price" id="price">
-
-        <label for="type">Tip:</label>
-        <select name="type" id="type">
-            <option value="0">Metlax</option>
-            <option value="1">Seramik</option>
-            <option value="2">Qranit</option>
-        </select>
-
-        <label for="wid">En: (santimetr)</label>
-        <input type="number" name="width" id="wid">
-
-        <label for="hei">Uzunluq: (santimetr)</label>
-        <input type="number" name="height" id="hei">
-        
-        <label for="img">Foto: </label>
-        <input type="file" asp-for="Image" id="img">
-
-        <input type="submit" onclick="newProduct()" value="Elave et!">
-    </form>
-</div>
-
-<br>
-<button onclick="logout()" style="width: 150px;" class="text-center">Çıxış et</button>
-<br>
-<script src="js/axios.min.js"></script>
-<script src="js/product_crud.js"></script>
+</html>

@@ -546,10 +546,10 @@
 	.footerabout {
 		text-align: center !important;
 	}
-
-
-
-	
+	.pad-container {
+		padding-top: 20px;
+		padding-bottom: 60px;
+	}
 	.banner-container.nomgr {
 		margin-top: 100px;
 	}
@@ -951,7 +951,7 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (max-width: 768px) and (max-width: 979px) {
 	.header-nav .container, .container {
 		padding-right: 15px;
 		padding-left: 15px;
@@ -1012,4 +1012,65 @@
 	.footer.white .btn-submit {
 		width: 100px;
 	}
+	.pad-container {
+		padding-top: 20px;
+		padding-bottom: 60px;
+	}
+	.footer-links {
+		position: relative;
+		left: -20px;
+	}
+
+
+	.footernav
+	{
+		position: relative !important;
+		top: 160px !important;
+	}
+
+	.footercards2 {
+		position: relative !important;
+		top: 160px !important;
+	}
+	
+
+	.footercards3 {
+		position: relative !important;
+		top: 170px !important;
+	}
+	
+
+	.socialsicons {
+		position: relative;
+		top: 60px;
+	}
+
+	.footerabout
+	{
+		float: left;
+	}
+
+	.footertext {
+		position: relative;
+		top: 10px;
+		float: left;
+	}
+
+
+
+@media (max-width: 320px) {
+	.pad-container {
+		padding-top: 33px;
+		padding-bottom: 60px;
+
+	}
+
+	.footernav
+	{
+		position: relative !important;
+		top: 90px !important;
+	}
+  
 }
+
+
