@@ -1,4 +1,4 @@
-function bs_input_file() {
+﻿function bs_input_file() {
 	$(".input-file").before(
 		function() {
 			if ( ! $(this).prev().hasClass('input-ghost') ) {

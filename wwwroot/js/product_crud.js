@@ -46,3 +46,28 @@ $("#deleteForm").submit((e) => {
 
     return false;
 })
+
+function changeStatus(id, status) {
+    axios.defaults.headers.post["Authorization"] = "Bearer " + window.localStorage.getItem("token");
+
+    axios.post('http://localhost:5000/orders/set-status/' + id + '?status=' + status)
+        .then((response) => {
+            alert("Sifarişin statusu yeniləndi.");
+            window.location.reload();
+            console.log(response);
+        })
+        .catch((err) => {
+            alert("Səhv baş verdi");
+            window.location.reload();
+            console.log(err);
+        });
+}
+
+function logout() {
+    window.localStorage.removeItem("token");
+    window.location.href = "/";
+}
+
+function filter(status) {
+    window.location.href = window.location.origin + "/admin/orders/" + status;
+}

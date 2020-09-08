@@ -1,12 +1,10 @@
-﻿@page "~/product/{id}"
+﻿@page "/product/{id:int}"
 @model acreator_front.Pages.ProductModel
 @{
+    Layout = "_Layout";
     var id = RouteData.Values["id"];
     ViewData["Title"] = "MƏHSUL HAQQINDA";
-
-
     var product = ViewData["product"] as Product;
-    Layout = "_Layout";
 }
 
 <section class="bg-white inner-banner pages">
@@ -44,17 +42,54 @@
                 <div class="price">&#8380; @((decimal)product.Price / 100)</div>
                 <p>@product.Type.ToString()</p>
                 <p>Ölçülər: <strong>@product.Measurement.Width x @product.Measurement.Height</strong></p>
-                @*<form enctype="multipart/form-data" method="post" class="cart t-mgr30">
-                    <div class="quantity">
-                        <label for="count">Sayi:</label>
-                        <input type="number" placeholder="Sayi" name="count"/>
-                        <input type="submit" value="Sifaris et!"/>
+                <br />
+                <br />
+                @* ORDER MODAL *@
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" id="orderButton" data-target="#exampleModalCenter">
+                    Sifariş et
+                </button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalCenterTitle">Detalları daxil edin.</h3>
+                                <small>(Sifarişdən sonra sizinlə əlaqə saxlanılacaq)</small>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label class="my-1 mr-2" for="pName">Məhsulu sil</label>
+                                        <input type="text" readonly id="pName" class="form-control" value="@product.Name" />
+                                        <input type="hidden" value="@product.Id" id="productId" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="area">Almaq istədiyiniz sahə (kv. m)</label>
+                                        <input type="number" class="form-control" id="area" placeholder="0">
+                                        <input type="hidden" value="@product.Price" id="price"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact">Əlaqə nömrəsi</label>
+                                        <input type="text" class="form-control" id="contact" placeholder="Əlaqə nömrəsi və ya email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="details">Əlavə qeydlər</label>
+                                        <textarea class="form-control" id="details" rows="5"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                @*<button type="button" class="btn btn-secondary" data-dismiss="modal">Ləğv edin.</button>*@
+                                <button type="button" class="btn btn-primary" onclick="postOrder()">Sifariş et!</button>
+                            </div>
+                        </div>
                     </div>
-                </form>*@
-                @*<div class="clearfix"></div>*@
-
-
-
+                </div>
+                <div class="clearfix"></div>
             </div>
 
         </div>
@@ -109,54 +144,6 @@
                         </table>
                     </div>
                 </div>
-
-                @*<div class="tab-block" id="tab-3">
-                    <div class="container">
-                        <section class="comments-sec">
-                            <ol class="commentlist">
-
-                                <li>
-                                    <div class="avatar"><img src="images/content/happy-clients-01.jpg" alt="" /> </div>
-                                    <div class="comment-des">
-                                        <h4 class="fw600">Jessica lyon</h4>
-                                        <p class="date">
-                                            Jun 11th, 2016 05:00 PM - <a href="#">Reply</a>
-                                        </p>
-                                        <p>In lacinia aliquet est et luctus. Sed et hendrerit tortor. Ut id aliquam arcu. Nam a mauris porta, pharetra justo sit amet, vestibulum justo.</p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <ol class="childlist">
-                                        <li>
-                                            <div class="avatar"><img src="images/content/happy-clients-02.jpg" alt="" /> </div>
-                                            <div class="comment-des">
-                                                <h4 class="fw600">Tom Richard</h4>
-                                                <p class="date">
-                                                    Jan 1st, 2015 03:15 PM - <a href="#">Reply</a>
-                                                </p>
-                                                <p>In lacinia aliquet est et luctus. Sed et hendrerit tortor. Ut id aliquam arcu. Nam a mauris porta, pharetra justo sit amet, vestibulum justo.</p>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </li>
-                                    </ol>
-                                </li>
-
-                                <li>
-                                    <div class="avatar"><img src="images/content/happy-clients-01.jpg" alt="" /> </div>
-                                    <div class="comment-des">
-                                        <h4 class="fw600">Jessica lyon</h4>
-                                        <p class="date">
-                                            Mar 24th, 2016 07:45 PM - <a href="#">Reply</a>
-                                        </p>
-                                        <p>In lacinia aliquet est et luctus. Sed et hendrerit tortor. Ut id aliquam arcu. Nam a mauris porta, pharetra justo sit amet, vestibulum justo.</p>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-
-                            </ol>
-                        </section>
-                    </div>
-                </div>*@
-
             </div>
         </div>
 
@@ -169,3 +156,6 @@
     </div>
 
 </section>
+
+<script src="~/js/order.js"></script>
+<script src="~/js/axios.min.js"></script>

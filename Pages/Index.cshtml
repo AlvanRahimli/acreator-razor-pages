@@ -9,32 +9,28 @@
 <html lang="en">
 
 <head>
-    <!-- Basic Page Needs
-================================================== -->
+    <!-- Basic Page Needs ================================================== -->
     <meta charset="utf-8">
     <title>ACreaetor - Just Marbellous!</title>
-    <!-- Favicon
-    ============================================== -->
+    <!-- Favicon ============================================== -->
 
-    <!-- Mobile Specific
-================================================== -->
+    <!-- Mobile Specific ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <!-- CSS Files
-================================================== -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/color/yellow.css" id="colors">
-    <link rel="stylesheet" type="text/css" href="css/settings.css">
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="all" />
+    <!-- CSS Files ================================================== -->
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="~/css/color/yellow.css" id="colors">
+    <link rel="stylesheet" type="text/css" href="~/css/settings.css">
+    <link rel="stylesheet" type="text/css" href="~/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/css/jquery.fancybox.css" media="all" />
     <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800'>
     <link rel='stylesheet' type='text/css'
         href='https://fonts.googleapis.com/css?family=Montserrat:100,300,400,600,700,800,900'>
-    <link rel="stylesheet" type="text/css" href="css/fonts/fontello.css">
-    <link rel="stylesheet" type="text/css" href="css/fonts/gizmo.css">
-    <link rel="stylesheet" type="text/css" href="css/fonts/picons.css">
-    <link rel="stylesheet" type="text/css" href="switcher/switcher.css">
+    <link rel="stylesheet" type="text/css" href="~/css/fonts/fontello.css">
+    <link rel="stylesheet" type="text/css" href="~/css/fonts/gizmo.css">
+    <link rel="stylesheet" type="text/css" href="~/css/fonts/picons.css">
+    @*<link rel="stylesheet" type="text/css" href="switcher/switcher.css">*@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- Modernizr js file ================================================== -->
@@ -103,16 +99,16 @@
             <!-- / top bar -->
             <!-- logo bar -->
             <div class="container header-nav">
-
                 <div class="col-sm-3 col-xs-12">
                     <div class="basic-wrapper">
-                        <a class="mobile-menu" data-toggle="collapse" data-target=".navbar-collapse"><i
-                                class='icon-menu'></i></a>
-                        <a class="logo" href="index_EN.html"><img src="images/logo.png" alt="" />
+                        <a class="mobile-menu" data-toggle="collapse" data-target="#myNavCollapse">
+                        <i class='icon-menu'></i></a>
+                        <a class="logo" href="/"><img src="images/logo.png" alt="logo" />
                         </a>
                     </div>
                 </div>
 
+                @* Unvan ve sair *@
                 <div class="col-sm-9 col-xs-12">
                     <ul class="top-contact">
                         <li>
@@ -146,7 +142,6 @@
                         </li>
                     </ul>
                 </div>
-
             </div>
             <!--/ logo bar -->
 
@@ -155,7 +150,7 @@
 
             <div class="container">
 
-                <div class="collapse navbar-collapse right">
+                <div class="collapse navbar-collapse right" id="myNavCollapse" style="z-index: 1000">
 
                     <!-- navigation -->
                     <ul class="nav navbar-nav">
@@ -172,15 +167,15 @@
 
                         <li class="dropdown"><a href="#" class="dropdown-toggle js-activated">Dil seç</a>
                             <ul class="dropdown-menu">
-                                <li><a href="/"><img src="images/flag/azerbaijan.svg" width="20px"
-                                            height="20px" alt="" class="languageicon"><span class="lanicon">AZ</span>
+                                <li><a href="/"><img src="images/flag/azerbaijan.svg" width="20"
+                                            height="20" alt="" class="languageicon"><span class="lanicon">AZ</span>
                                     </a>
                                 </li>
-                                <li><a href="index_EN.html"><img src="images/flag/england.svg" width="20px"
-                                            height="20px" alt="" class="languageicon"><span
-                                            class="lanicon">EN</span></a>
+                                <li><a href="index_EN.html"><img src="images/flag/england.svg" width="20"
+                                            height="20" alt="" class="languageicon"><span
+                                            class="languageicon">EN</span></a>
                                 </li>
-                                <li><a href="index_RU.html"><img src="images/flag/russia.svg" width="20px" height="20px"
+                                <li><a href="index_RU.html"><img src="images/flag/russia.svg" width="20" height="20"
                                             alt="" class="languageicon"><span class="lanicon">RU</span> </a>
                                 </li>
 
@@ -284,7 +279,7 @@
 
             <!-- tagline section -->
             <section class="bg-dark-gray">
-                <div class="container">
+                <div class="container" style="padding-top: 30px; padding-bottom: 30px">
 
                     <div class="row">
 
@@ -310,32 +305,29 @@
 
                     <div class="row b-pad40">
 
-                        <div class="col-md-4 t-pad60" data-aos="fade-right" data-aos-duration="1500">
-                            <div class="services-box-2">
-                                <div class="content">
-                                    <p class="b-mgr20"><img src="images/gallery/p3.jpeg" class="pic" alt="">
-                                    </p>
-                                    <h3 class="introtitles">Ağlay</h3>
-                                    <p class="introtitles">. </p>
+                        <div style="margin-top: 30px">
+                            <div class="col-md-4 t-pad60" data-aos="fade-right" data-aos-duration="1500">
+                                <div class="services-box-2">
+                                    <div class="content">
+                                        <p class="b-mgr20">
+                                            <img src="images/gallery/p3.jpeg" class="pic" alt="">
+                                        </p>
+                                        <h3 class="introtitles">Ağlay</h3>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="col-md-4 t-pad60" data-aos="fade-right" data-aos-duration="1500">
+                                <div class="services-box-2">
+                                    <div class="content">
+                                        <p class="b-mgr20">
+                                            <img src="images/gallery/p5.jpeg" class="pic" alt="">
+                                        </p>
+                                        <h3 class="introtitles">Mərmər</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-md-4 t-pad60" data-aos="fade-right" data-aos-duration="1500">
-                            <div class="services-box-2">
-                                <div class="content">
-                                    <p class="b-mgr20"><img src="images/gallery/p9.jpeg" class="pic" alt="">
-                                    </p>
-                                    <h3 class="introtitles">Ağlay</h3>
-                                    <p class="introtitles">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                                        do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. </p>
-
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="col-md-4" data-aos="fade-left" data-aos-duration="1500">
 
                             <div class="q-form-container">
@@ -444,8 +436,9 @@
             <!-- project section -->
             <section class="bg-dark-gray">
 
-                <div class="container">
-                    <div class="row col-md-12 text-center t-pad60 b-pad50" data-aos="zoom-in-down" data-aos="flip-right"
+                <div class="container" style="padding-top: 30px; padding-bottom: 30px">
+                    @*<div class="row col-md-12 text-center t-pad60 b-pad50" data-aos="zoom-in-down" data-aos="flip-right"*@
+                    <div class="row col-md-12 text-center t-pad60 b-pad50" data-aos="flip-right"
                         data-aos-duration="1500">
                         <h2 class="heading colored fotogallery-title">FOTO QALEREYA</h2>
                         <p class="h-sub-white mt-2">Əl işlərimizlə tanış ola bilərsiniz.</p>
@@ -517,119 +510,8 @@
 
             </section>
             <!--/ parallax section -->
-
-            <!-- client section -->
-            <!-- <section>
-                <div class="container pad-container">
-
-                    <div class="col-md-6" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
-                        data-aos-duration="1500">
-                        <div class="row">
-                            <h3 class="heading ourclients-title">Bizim müştərilər</h3>
-
-                            <div class="clients">
-                                <ul>
-                                    <li class="item"><img src="images/content/logo-01.jpg" alt="">
-                                    </li>
-                                    <li class="item"><img src="images/content/logo-01.jpg" alt="">
-                                    </li>
-                                    <li class="item"><img src="images/content/logo-01.jpg" alt="">
-                                    </li>
-                                    <li class="item"><img src="images/content/logo-01.jpg" alt="">
-                                    </li>
-                                    <li class="item"><img src="images/content/logo-01.jpg" alt="">
-                                    </li>
-                                    <li class="item"><img src="images/content/logo-01.jpg" alt="">
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-6 ourclients-top">
-                        <div class="row" id="musteriler" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                            data-aos-offset="500" data-aos-duration="1500">
-
-                            <h3 class="heading ourclients-title">Müştəri məmnuniyyəti</h3>
-
-                            <div class="owl-testimonials owl-carousel t-pad20">
-
-                                <div class="item">
-                                    <div class="testimonials">
-                                        <div class="testimonials-content1">
-                                            <p> “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                eiusmod tempor incididunt ut labore et dolore magna aliqua. eiusmod
-                                                tempor incididunt ut labore et dolore magna aliquea. Ut enim ad minim
-                                                veniam, quis nostrud exercitation Ut enim ad minim veniam, quis nostrud
-                                                exercitation ullamco. Etiam sit amet fringilla lacus. Pellentesque
-                                                suscipit ante at ullamcorper pulvinar neque porttitor." </p>
-                                        </div>
-                                        <div class="testimonials-author">
-                                            <img src="images/content/happy-clients-01.jpg" alt="">
-                                            <p class="colored"> Lorem, ipsum dolor.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                                    <div class="testimonials">
-                                        <div class="testimonials-content1">
-                                            <p> “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                eiusmod tempor incididunt ut labore et dolore magna aliqua. eiusmod
-                                                tempor incididunt ut labore et dolore magna aliquea. Ut enim ad minim
-                                                veniam, quis nostrud exercitation Ut enim ad minim veniam, quis nostrud
-                                                exercitation ullamco. Etiam sit amet fringilla lacus. Pellentesque
-                                                suscipit ante at ullamcorper pulvinar neque porttitor." </p>
-                                        </div>
-                                        <div class="testimonials-author">
-                                            <img src="images/content/happy-clients-02.jpg" alt="">
-                                            <p class="colored"> Lorem, ipsum dolor. </p>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="item">
-                                    <div class="testimonials">
-                                        <div class="testimonials-content1">
-                                            <p> “Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                eiusmod tempor incididunt ut labore et dolore magna aliqua. eiusmod
-                                                tempor incididunt ut labore et dolore magna aliquea. Ut enim ad minim
-                                                veniam, quis nostrud exercitation Ut enim ad minim veniam, quis nostrud
-                                                exercitation ullamco. Etiam sit amet fringilla lacus. Pellentesque
-                                                suscipit ante at ullamcorper pulvinar neque porttitor." </p>
-                                        </div>
-                                        <div class="testimonials-author">
-                                            <img src="images/content/happy-clients-03.jpg" alt="">
-                                            <p class="colored"> Lorem, ipsum dolor.</p>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section> -->
-            <!--/ client section -->
-
-            <!-- tagline section -->
-            <section class="bot-subscribe">
-
-
-            </section>
-            <!--/ tagline section -->
             
             <footer class="footer">
-
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
@@ -751,6 +633,7 @@
                     </div>
                 </div>
             </footer>
+        </div>
     </div>
     <!--/content wrapper -->
 

@@ -1,0 +1,89 @@
+﻿@page "/admin/orders/{status:int}"
+@model acreator_front.Pages.AdminOrdersModel
+@{
+    ViewData["admin_orders"] = "active";
+    Layout = "_AdminLayout";
+    var orders = ViewData["orders"] as List<Order>;
+}
+
+<div class="container text-center" style="margin-top: 30px; margin-bottom: 30px" 3>
+    <h1>Sifarişlər</h1>
+    <br />
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary @ViewData["4"]" onclick="filter(4)">
+            <input type="radio" name="options" id="option1" checked> Hamısı
+        </label>
+        <label class="btn btn-secondary @ViewData["0"]" onclick="filter(0)">
+            <input type="radio" name="options" id="option2"> Gözləmədə olanlar
+        </label>
+        <label class="btn btn-secondary @ViewData["1"]" onclick="filter(1)">
+            <input type="radio" name="options" id="option3"> Qəbul edilmişlər
+        </label>
+        <label class="btn btn-secondary @ViewData["2"]" onclick="filter(2)">
+            <input type="radio" name="options" id="option4"> Yerinə yetirilmişlər
+        </label>
+        <label class="btn btn-secondary @ViewData["3"]" onclick="filter(3)">
+            <input type="radio" name="options" id="option5"> Ləğv edilmişlər
+        </label>
+    </div>
+</div>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Məhsulun adı</th>
+            <th scope="col">Sifariş tarixi</th>
+            <th scope="col">Sifariş edilən sahə</th>
+            <th scope="col">Yekun qiymət</th>
+            <th scope="col">Əlaqə məlumatları</th>
+            <th scope="col">Əlavə qeydlər</th>
+            <th scope="col">Status</th>
+            <th scope="col">Əməliyyat</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int no = 1;
+            if (orders != null)
+                foreach (var order in orders)
+                {
+                    string color = "#212529";
+                    if (order.Status == OrderStatus.Done)
+                    {
+                        color = "green";
+                    }
+                    else if (order.Status == OrderStatus.Denied)
+                    {
+                        color = "red";
+                    }
+                    else if (order.Status == OrderStatus.Approved)
+                    {
+                        color = "#212529; font-style: italic;";
+                    }
+                    <tr style="color: @color">
+                        <th scope="row">@no</th>
+                        <td>@order.Product.Name</td>
+                        <td>@order.Date.ToShortDateString()</td>
+                        <td>@order.Area kv. m</td>
+                        <td>&#8380;@((decimal)order.FinalPrice / 100)</td>
+                        <td>@order.Contact</td>
+                        <td>@order.Details</td>
+                        <td>@order.Status.ToString()</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Əməliyyat seç
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" onclick="changeStatus(@order.Id, 1)">Qəbul et</a>
+                                    <a class="dropdown-item" onclick="changeStatus(@order.Id, 2)">Yerinə yetirildi</a>
+                                    <a class="dropdown-item" onclick="changeStatus(@order.Id, 3)">Ləğv et</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    no++;
+                }
+        }
+    </tbody>
+</table>

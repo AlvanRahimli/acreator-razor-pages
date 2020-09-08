@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Məhsulları idarə edin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="~/css/admin/style.css">
+    <link rel="stylesheet" href="~/css/admin/bootstrap.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Acreator - Admin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item @ViewData["admin_home"]">
+                    <a class="nav-link" href="/admin">Ana səhifə<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item @ViewData["admin_crud"]">
+                    <a class="nav-link" href="/admin/crud">İdarəetmə paneli</a>
+                </li>
+                <li class="nav-item @ViewData["admin_products"]">
+                    <a class="nav-link" href="/admin/products">Məhsullar</a>
+                </li>
+                <li class="nav-item @ViewData["admin_orders"]">
+                    <a class="nav-link" href="/admin/orders/4">Sifarişlər</a>
+                </li>
+                <li class="nav-item @ViewData["admin_messages"]">
+                    <a class="nav-link" href="/admin/messages">Müraciətlər</a>
+                </li>
+            </ul>
+            <div class="my-2 my-lg-0">
+                <button class="btn btn-outline-success my-2 my-sm-0" onclick="logout()">Çıxış et</button>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="~/js/admin/jquery-3.2.1.slim.min.js"></script>
+    <script src="~/js/admin/popper.js"></script>
+    <script src="~/js/admin/bootstrap.min.js"></script>
+    <script src="~/js/admin/inputs.js"></script>
+    <script src="~/js/axios.min.js"></script>
+    <script src="~/js/admin/app.js"></script>
+    <script src="~/js/product_crud.js"></script>
+</body>
+</html>
