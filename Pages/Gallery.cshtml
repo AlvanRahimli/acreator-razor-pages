@@ -1,8 +1,10 @@
 @page "/gallery"
-@model PrivacyModel
+@model GalleryModel
 @{
     ViewData["Title"] = "QALAREYA";
     ViewData["gallery"] = "current";
+
+    var images = ViewData["images"] as List<Image>;
 }
 
             <!-- inner banner -->
@@ -25,168 +27,48 @@
 
 <!-- projects filter -->
 <div class="filter text-left">
-<a href="#" class="filter active" data-filter="*">Fotolar</a>
-<a href="#" class="filter" data-filter=".branding">Lorem</a>
-<a href="#" class="filter" data-filter=".design">Lorem</a>
-<a href="#" class="filter" data-filter=".photography">Lorem</a>
+    <a href="#" class="filter active" data-filter="*">Hamısı</a>
+    <a href="#" class="filter" data-filter=".metlax">Metlax</a>
+    <a href="#" class="filter" data-filter=".granit">Granit</a>
+    <a href="#" class="filter" data-filter=".seramik">Seramik</a>
 </div>
 <!-- /projects filter -->
 
 <!-- projects grid -->
 <ul class="projects-grid-3 project-grid-gut hide-titles" id="project-grid">
+    @foreach (var img in images)
+    {
+        <li class="project-item mix @img.Alt">
+            <div class="project-img">
+                <img class="project-img" src="http://localhost:5000/@img.Url" alt="@img.Alt" />
+            </div>
+            <div class="project-intro">
+                <h3 class="project-title"><a href="http://localhost:5000/@img.Url">Tam Bax</a></h3>
+            </div>
+        </li>
+    }
+</ul>
+<!-- / projects grid -->
 
-<!-- project item -->
-<li class="project-item mix photography">
-
-    <div class="project-img">
-
-        <img class="project-img" src="images/content/portfolio/p-01.jpg" alt="project" />
-
-    </div>
-    <div class="project-intro">
-        <h3 class="project-title"><a href="images/content/portfolio/p-01.jpg">Tam Bax</a> </h3>
-
-
-    </div>
-
-</li>
-<!-- / project item -->
-
-<!-- project item -->
-<li class="project-item mix branding">
-    <div class="project-img">
-        <img class="project-img" src="images/content/portfolio/p-02.jpg" alt="project" />
-    </div>
-    <div class="project-intro">
-        <h3 class="project-title"><a href="images/content/portfolio/p-02.jpg">Tam Bax</a> </h3>
-
-
-    </div>
-</li>
-<!-- / project item -->
-
-<!-- project item -->
-<li class="project-item mix design">
-    <div class="project-img">
-        <img class="project-img" src="images/content/portfolio/p-03.jpg" alt="project" />
-    </div>
-    <div class="project-intro">
-        <h3 class="project-title"><a href="images/content/portfolio/p-03.jpg">Tam Bax</a> </h3>
-
-
-    </div>
-</li>
-<!-- / project item -->
-
-<!-- project item -->
-<li class="project-item mix branding">
-    <div class="project-img">
-    <img class="project-img" src="images/content/portfolio/p-04.jpg" alt="project" />
-</div>
-<div class="project-intro">
-    <h3 class="project-title"><a href="images/content/portfolio/p-04.jpg">Tam Bax</a> </h3>
-
-
-</div>
-</li>
-            <!-- / project item -->
-
-            <!-- project item -->
-            <li class="project-item mix photography">
-
-                <div class="project-img">
-                    <img class="project-img" src="images/content/portfolio/p-05.jpg" alt="project" />
-                </div>
-                <div class="project-intro">
-                    <h3 class="project-title"><a href="images/content/portfolio/p-05.jpg">Tam Bax</a> </h3>
-
-
-                </div>
-
-            </li>
-            <!-- / project item -->
-
-            <!-- project item -->
-            <li class="project-item mix design">
-
-                <div class="project-img">
-                    <img class="project-img" src="images/content/portfolio/p-06.jpg" alt="project" />
-                </div>
-                <div class="project-intro">
-                    <h3 class="project-title"><a href="images/content/portfolio/p-06.jpg">Tam Bax</a> </h3>
-
-
-                </div>
-            </li>
-            <!-- / project item -->
-
-            <!-- project item -->
-            <li class="project-item mix photography">
-
-                <div class="project-img">
-                    <img class="project-img" src="images/content/portfolio/p-07.jpg" alt="project" />
-                </div>
-                <div class="project-intro">
-                    <h3 class="project-title"><a href="images/content/portfolio/p-07.jpg">Tam Bax</a> </h3>
-
-
-                </div>
-
-            </li>
-            <!-- / project item -->
-
-            <!-- project item -->
-            <li class="project-item mix design">
-
-                <div class="project-img">
-                    <img class="project-img" src="images/content/portfolio/p-08.jpg" alt="project" />
-                </div>
-                <div class="project-intro">
-                    <h3 class="project-title"><a href="images/content/portfolio/p-08.jpg">Tam Bax</a> </h3>
-
-
-                </div>
-
-            </li>
-            <!-- / project item -->
-
-            <!-- project item -->
-            <li class="project-item mix design">
-
-                <div class="project-img">
-                    <img class="project-img" src="images/content/portfolio/p-09.jpg" alt="project" />
-                </div>
-                <div class="project-intro">
-                    <h3 class="project-title"><a href="images/content/portfolio/p-09.jpg">Tam Bax</a> </h3>
-
-
-                </div>
-
-            </li>
-            <!-- / project item -->
-
-        </ul>
-        <!-- / projects grid -->
-
-        <!--/ pagination -->
+<!--/ pagination -->
 
         
-        <div class="pagination pagination-top">
-            <ul>
-                <li><a href="#">Geri</a>
-                </li>
-                <li><a href="#" class="current">1</a>
-                </li>
-                <li><a href="#">2</a>
-                </li>
-                <li><a href="#">3</a>
-                </li>
-                <li><a href="#">İrəli</a>
-                </li>
-            </ul>
-        </div>
+@*<div class="pagination pagination-top">
+    <ul>
+        <li><a href="#">Geri</a>
+        </li>
+        <li><a href="#" class="current">1</a>
+        </li>
+        <li><a href="#">2</a>
+        </li>
+        <li><a href="#">3</a>
+        </li>
+        <li><a href="#">İrəli</a>
+        </li>
+    </ul>
+</div>*@
 
-    </div>
+</div>
 
 
 </section>

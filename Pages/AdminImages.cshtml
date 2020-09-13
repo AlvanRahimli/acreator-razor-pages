@@ -1,0 +1,111 @@
+﻿@page "/admin/images/{purpose:int=3}"
+@model acreator_front.Pages.AdminImagesModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["admin_images"] = "active";
+    var images = ViewData["images"] as List<Image>;
+}
+
+<div class="container text-center" style="margin-top: 30px; margin-bottom: 30px">
+    <h1>Şəkillər</h1>
+    <br />
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary @ViewData["3"]" onclick="filterImgs(3)">
+            <input type="radio" name="options" id="option1" checked> Hamısı
+        </label>
+        <label class="btn btn-secondary @ViewData["0"]" onclick="filterImgs(0)">
+            <input type="radio" name="options" id="option2"> Ana səhifə şəkilləri
+        </label>
+        <label class="btn btn-secondary @ViewData["1"]" onclick="filterImgs(1)">
+            <input type="radio" name="options" id="option2"> Qalareya şəkilləri
+        </label>
+        <label class="btn btn-secondary @ViewData["2"]" onclick="filterImgs(2)">
+            <input type="radio" name="options" id="option2"> Önə çıxan şəkillər
+        </label>
+        <label class="btn btn-primary" data-toggle="modal" data-target="#imageModal">
+            <input type="radio" name="options" id="option2"> + Əlavə et
+        </label>
+    </div>
+</div>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Adı</th>
+            <th scope="col">Şəkilə keçid</th>
+            <th scope="col">Növ</th>
+            <th scope="col">Məqsəd</th>
+            <th scope="col">Əməliyyatlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int no = 1;
+            if (images != null)
+                foreach (var img in images)
+                {
+                    <tr>
+                        <th scope="row">@no</th>
+                        <td>@img.Url.Split('/')[2]</td>
+                        <td><a href="http://localhost:5000/@img.Url">Keçid</a></td>
+                        <td>@img.Alt</td>
+                        <td>@img.Purpose.ToString()</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Əməliyyat seç
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" onclick="deleteImg(@img.Id)">Sil</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    no++;
+                }
+        }
+    </tbody>
+</table>
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalCenterTitle">Detalları daxil edin.</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label class="my-1 mr-2" for="imgFile">Şəkli seçin</label>
+                        <input type="file" id="imgFile" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="imgPurpose">Məqsədini seçin</label>
+                        <select class="form-control" id="imgPurpose">
+                            <option>Seçin</option>
+                            <option value="0">Ana səhifə üçün</option>
+                            <option value="1">Qalareya üçün</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="imgType">Növünü seçin</label>
+                        <select class="form-control" id="imgType">
+                            <option>Seçin</option>
+                            <option value="metlax">Metlax</option>
+                            <option value="granit">Granit</option>
+                            <option value="seramik">Seramik</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="postImage()">Əlavə et</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/images.js"></script>

@@ -1,4 +1,4 @@
-﻿@page "/admin/orders/{status:int}"
+﻿@page "/admin/orders/{status:int=4}"
 @model acreator_front.Pages.AdminOrdersModel
 @{
     ViewData["admin_orders"] = "active";
@@ -6,7 +6,7 @@
     var orders = ViewData["orders"] as List<Order>;
 }
 
-<div class="container text-center" style="margin-top: 30px; margin-bottom: 30px" 3>
+<div class="container text-center" style="margin-top: 30px; margin-bottom: 30px">
     <h1>Sifarişlər</h1>
     <br />
     <div class="btn-group btn-group-toggle" data-toggle="buttons">

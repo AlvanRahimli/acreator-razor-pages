@@ -1,0 +1,76 @@
+﻿@page "/admin/messages/{status:int=2}"
+@model acreator_front.Pages.AdminMessagesModel
+@{
+    Layout = "_AdminLayout";
+    ViewData["admin_messages"] = "active";
+    var messages = ViewData["messages"] as List<Message>;
+}
+
+<div class="container text-center" style="margin-top: 30px; margin-bottom: 30px">
+    <h1>Müraciətlər</h1>
+    <br />
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary @ViewData["2"]" onclick="filterMsgs(2)">
+            <input type="radio" name="options" id="option1" checked> Hamısı
+        </label>
+        <label class="btn btn-secondary @ViewData["0"]" onclick="filterMsgs(0)">
+            <input type="radio" name="options" id="option2"> Cavablandırılmış
+        </label>
+        <label class="btn btn-secondary @ViewData["1"]" onclick="filterMsgs(1)">
+            <input type="radio" name="options" id="option2"> Oxunmamış
+        </label>
+    </div>
+</div>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Müştərinin adı</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefon</th>
+            <th scope="col">Sual mətni</th>
+            <th scope="col">Göndərilmə tarixi</th>
+            <th scope="col">Status</th>
+            <th scope="col">Əməliyyatlar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int no = 1;
+            if (messages != null)
+                foreach (var msg in messages)
+                {
+                    string color = "#212529";
+                    if (msg.Status == MessageStatus.Answered)
+                    {
+                        color = "green";
+                    }
+                    else if (msg.Status == MessageStatus.Pending)
+                    {
+                        color = "#212529; font-style: italic;";
+                    }
+                    <tr style="color: @color">
+                        <th scope="row">@no</th>
+                        <td>@msg.ClientName</td>
+                        <td>@msg.ClientEmail</td>
+                        <td>@msg.ClientPhone</td>
+                        <td>@msg.Content</td>
+                        <td>@msg.Date.ToShortDateString()</td>
+                        <td>@msg.Status.ToString()</td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Əməliyyat seç
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" onclick="changeMsgStatus(@msg.Id, 0)">Cavablandırıldı</a>
+                                    <a class="dropdown-item" onclick="changeMsgStatus(@msg.Id, 1)">Ləğv et</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    no++;
+                }
+        }
+    </tbody>
+</table>

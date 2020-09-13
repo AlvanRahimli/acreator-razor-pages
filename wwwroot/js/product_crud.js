@@ -8,6 +8,8 @@
     form.append("name", document.getElementById("name").value);
     form.append("price", parseInt($("#price").val()));
     form.append("type", parseInt(document.getElementById("type").value));
+    form.append("color", document.getElementById("color").value);
+    form.append("desc", document.getElementById("desc").value);
     form.append("width", parseInt(document.getElementById("width").value));
     form.append("height", parseInt(document.getElementById("height").value));
     form.append("image", document.getElementById("image").files[0]);
@@ -63,6 +65,22 @@ function changeStatus(id, status) {
         });
 }
 
+function changeMsgStatus(id, status) {
+    axios.defaults.headers.post["Authorization"] = "Bearer " + window.localStorage.getItem("token");
+
+    axios.post('http://localhost:5000/messages/set-status/' + id + '?status=' + status)
+        .then((response) => {
+            alert("Sualın statusu yeniləndi.");
+            window.location.reload();
+            console.log(response);
+        })
+        .catch((err) => {
+            alert("Səhv baş verdi");
+            window.location.reload();
+            console.log(err);
+        });
+}
+
 function logout() {
     window.localStorage.removeItem("token");
     window.location.href = "/";
@@ -70,4 +88,12 @@ function logout() {
 
 function filter(status) {
     window.location.href = window.location.origin + "/admin/orders/" + status;
+}
+
+function filterMsgs(status) {
+    window.location.href = window.location.origin + "/admin/messages/" + status;
+}
+
+function filterImgs(status) {
+    window.location.href = window.location.origin + "/admin/images/" + status;
 }

@@ -1,25 +1,33 @@
-using acreator_front.Models;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using acreator_front.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 
 namespace acreator_front.Pages
 {
-    public class GalleryModel : PageModel
+    public class AdminImagesModel : PageModel
     {
         private readonly IHttpClientFactory _clientFactory;
-        public GalleryModel(IHttpClientFactory clientFactory)
+
+        public AdminImagesModel(IHttpClientFactory clientFactory)
         {
             this._clientFactory = clientFactory;
         }
-
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(int purpose)
         {
-            var client = _clientFactory.CreateClient("getProductClient");
+            var client = _clientFactory.CreateClient("getImagesClient");
 
-            var request = new HttpRequestMessage(HttpMethod.Get, $"http://localhost:5000/images/filter/1");
+            HttpRequestMessage request = purpose switch
+            {
+                3 => new HttpRequestMessage(HttpMethod.Get, "http://localhost:5000/images/"),
+                _ => new HttpRequestMessage(HttpMethod.Get, $"http://localhost:5000/images/filter/{purpose}"),
+            };
+
             request.Headers.Add("Accept", "application/json");
 
             var response = await client.SendAsync(request);
@@ -35,6 +43,11 @@ namespace acreator_front.Pages
                 }
 
                 ViewData["images"] = serialized.Data;
+                ViewData[purpose.ToString()] = "active";
+            }
+            else
+            {
+                ViewData["images"] = null;
             }
         }
     }

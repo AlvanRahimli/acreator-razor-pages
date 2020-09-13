@@ -123,7 +123,7 @@
             <!-- logo bar -->
             <div class="container header-nav pad2">
 
-                <div class="col-sm-3 col-xs-12">
+                <div class="col-sm-3 col-xs-12" id="logoDiv">
                     <div class="basic-wrapper">
                         <a class="mobile-menu right" data-toggle="collapse" data-target=".navbar-collapse">
                             <i class='icon-menu'></i>
@@ -148,7 +148,9 @@
                             <li class="dropdown pad @ViewData["gallery"]">
                                 <a href="/gallery" class="dark">Qalereya</a>
                             </li>
-                            <li class="dropdown pad @ViewData["about"]"><a href="/about" class="dark">Haqqımızda</a>
+                            <li class="dropdown pad @ViewData["about"]">
+                                <a href="/about" class="dark">Haqqımızda</a>
+                            </li>
                             <li class="dropdown pad @ViewData["products"]">
                                 <a href="/products" class="dark">Məhsullar</a>
                             </li>
@@ -243,7 +245,7 @@
                                             </li>
                                             <li class="list-inline-item">
                                                 <img src="~/icon/phone-alt-solid.svg"
-                                                        class="phoneicon" alt=""><span class="ml-2"># TELEFON #</span>
+                                                     class="phoneicon" alt=""><span class="ml-2"># TELEFON #</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -271,7 +273,7 @@
 
                         <div class="container">
 
-                         
+
 
 
                             <div class="row d-flex justify-content-center designbyme">

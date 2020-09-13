@@ -12,6 +12,8 @@ namespace acreator_front.Models
         public int Price { get; set; }
         [Required]
         public ProductType Type { get; set; }
+        public string Color { get; set; }
+        public string Desc { get; set; }
         public string ImageUrl { get; set; }
         public IFormFile Image { get; set; }
         public int Width { get; set; }

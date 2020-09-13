@@ -1,10 +1,10 @@
-@page "/products"
+@page "/products/"
 @model ProductsModel
 @{
     List<Product> products = ViewData["ReturnedProducts"] as List<Product>;
 }
 
-            <!-- inner banner -->
+<!-- inner banner -->
 <section class="bg-white inner-banner pages">
 
     <div class="container pad-container">
@@ -16,6 +16,7 @@
 
 </section>
 <!-- / inner banner -->
+<br />
 
 <!-- Product section -->
 <section>
@@ -24,32 +25,38 @@
         <div class="col-sm-12 content">
 
             <div class="product-grid col3">
+
+                <div class="filter text-left">
+                    <a href="#" class="filter active" data-filter="*">Hamısı</a>
+                    <a href="#" class="filter" data-filter=".metlax">Metlax</a>
+                    <a href="#" class="filter" data-filter=".seramik">Seramik</a>
+                    <a href="#" class="filter" data-filter=".granit">Granit</a>
+                </div>
                 @if (products != null)
-                @foreach (var product in products)
-                {
-                    <div class="post brd0">
-                        <figure>
-                            <a href="/product/@product.Id">
-                                <img id="pImage" src="@("https://www.acreator.az/" + product.ImageUrl)"
-                                    alt="@product.Name" width="350" height="400"/> 
-                            </a>
-                            <a href="/order?id=@product.Id" class="btn right">Sifariş et</a>
-                        </figure>
-                        <div class="post-content">
-                            <h3><a href="product-single3.html">@product.Name</a></h3>
-                            <h4 style="float: right;">@(product.Measurement.Width + " x " + product.Measurement.Height + " sm")</h4>
-                            <div class="price">
-                                <span>&#8380;@((decimal)product.Price / 100)</span>
+                    @foreach (var product in products)
+                    {
+                        <div class="post brd0 @product.Type.ToString().ToLower()">
+                            <figure>
+                                <a href="/product/@product.Id">
+                                    <img id="pImage" src="@("http://localhost:5000/" + product.ImageUrl)"
+                                         alt="@product.Name" width="350" height="400" />
+                                </a>
+                            </figure>
+                            <div class="post-content">
+                                <h3><a href="/product/@product.Id">@product.Name</a></h3>
+                                <h4 style="float: right;">@(product.Measurement.Width + " x " + product.Measurement.Height + " sm")</h4>
+                                <div class="price">
+                                    <span>&#8380;@((decimal)product.Price / 100)</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                }
+                    }
 
             </div>
 
             <div class="clearfix"></div>
             <div class="sep30"></div>
-            <div class="pagination">
+            @*<div class="pagination">
                 <ul>
                     <li><a href="#">Prev</a>
                     </li>
@@ -62,7 +69,7 @@
                     <li><a href="#">Next</a>
                     </li>
                 </ul>
-            </div>
+            </div>*@
 
         </div>
 
