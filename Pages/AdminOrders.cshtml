@@ -45,6 +45,7 @@
         @{
             int no = 1;
             if (orders != null)
+            {
                 foreach (var order in orders)
                 {
                     string color = "#212529";
@@ -52,13 +53,14 @@
                     {
                         color = "green";
                     }
-                    else if (order.Status == OrderStatus.Denied)
+                    else {if (order.Status == OrderStatus.Denied)
                     {
                         color = "red";
                     }
                     else if (order.Status == OrderStatus.Approved)
                     {
                         color = "#212529; font-style: italic;";
+                    }
                     }
                     <tr style="color: @color">
                         <th scope="row">@no</th>
@@ -84,6 +86,7 @@
                     </tr>
                     no++;
                 }
+            }
         }
     </tbody>
 </table>

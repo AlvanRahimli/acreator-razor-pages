@@ -24,18 +24,20 @@
         @{
             int no = 1;
             if (products != null)
-            foreach (var p in products)
             {
-                <tr>
-                    <th scope="row">@no</th>
-                    <td>@p.Name</td>
-                    <td>@p.Type.ToString()</td>
-                    <td>&#8380;@((decimal)p.Price / 100)</td>
-                    <td>@p.Measurement.Width x @p.Measurement.Height</td>
-                    <td>@p.Color</td>
-                    <td>@p.Desc</td>
-                </tr>
-                no++;
+                foreach (var p in products)
+                {
+                    <tr>
+                        <th scope="row">@no</th>
+                        <td>@p.Name</td>
+                        <td>@p.Type.ToString()</td>
+                        <td>&#8380;@((decimal)p.Price / 100)</td>
+                        <td>@p.Measurement.Width x @p.Measurement.Height</td>
+                        <td>@p.Color</td>
+                        <td>@p.Desc</td>
+                    </tr>
+                    no++;
+                }
             }
         }
     </tbody>

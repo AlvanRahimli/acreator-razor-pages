@@ -36,8 +36,9 @@
     </thead>
     <tbody>
         @{
-            int no = 1;
+            var no = 1;
             if (messages != null)
+            {
                 foreach (var msg in messages)
                 {
                     string color = "#212529";
@@ -45,9 +46,10 @@
                     {
                         color = "green";
                     }
-                    else if (msg.Status == MessageStatus.Pending)
+                    else {if (msg.Status == MessageStatus.Pending)
                     {
                         color = "#212529; font-style: italic;";
+                    }
                     }
                     <tr style="color: @color">
                         <th scope="row">@no</th>
@@ -71,6 +73,7 @@
                     </tr>
                     no++;
                 }
+            }
         }
     </tbody>
 </table>

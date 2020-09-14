@@ -1,9 +1,9 @@
 @page "/gallery"
+@using Microsoft.AspNetCore.Localization
 @model GalleryModel
+@inject IStringLocalizer<GalleryModel> Localizer
 @{
-    ViewData["Title"] = "QALAREYA";
     ViewData["gallery"] = "current";
-
     var images = ViewData["images"] as List<Image>;
 }
 
@@ -12,7 +12,7 @@
 
 <div class="container pad-container">
     <div class="col-md-12">
-        <h1 class="text-center">Foto Qalereya</h1>
+        <h1 class="text-center">@Localizer["title"].Value | @Localizer["title"]</h1>
         <h3 class="text-center">Qalareyada əl işlərimizlə tanış ola bilərsiniz</h3>
     </div>
 </div>
@@ -36,7 +36,8 @@
 
 <!-- projects grid -->
 <ul class="projects-grid-3 project-grid-gut hide-titles" id="project-grid">
-    @foreach (var img in images)
+    @if (images != null)
+    {@foreach (var img in images)
     {
         <li class="project-item mix @img.Alt">
             <div class="project-img">
@@ -46,7 +47,7 @@
                 <h3 class="project-title"><a href="http://localhost:5000/@img.Url">Tam Bax</a></h3>
             </div>
         </li>
-    }
+    }}
 </ul>
 <!-- / projects grid -->
 

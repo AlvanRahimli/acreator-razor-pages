@@ -1,18 +1,24 @@
+using System;
+using System.Linq;
 using acreator_front.Models;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Localization;
 
 namespace acreator_front.Pages
 {
     public class GalleryModel : PageModel
     {
         private readonly IHttpClientFactory _clientFactory;
-        public GalleryModel(IHttpClientFactory clientFactory)
+        private readonly IStringLocalizer _localizer;
+
+        public GalleryModel(IHttpClientFactory clientFactory, IStringLocalizer<GalleryModel> localizer)
         {
             this._clientFactory = clientFactory;
+            _localizer = localizer;
         }
 
         public async Task OnGetAsync()
@@ -29,13 +35,15 @@ namespace acreator_front.Pages
                 var data = await response.Content.ReadAsStringAsync();
                 var serialized = JsonConvert.DeserializeObject<ImagesResponseModel>(data);
 
-                for (int i = 0; i < serialized.Data.Count; i++)
+                foreach (var item in serialized.Data)
                 {
-                    serialized.Data[i].Url = serialized.Data[i].Url.Replace(@"\", "/");
+                    item.Url = item.Url.Replace(@"\", "/");
                 }
 
                 ViewData["images"] = serialized.Data;
             }
+            var title = _localizer["title"].Value;
+            Console.WriteLine(title);
         }
     }
 }

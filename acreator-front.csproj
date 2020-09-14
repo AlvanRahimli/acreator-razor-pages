@@ -79,4 +79,35 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Pages\GalleryModel.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GalleryModel.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\GalleryModel.az.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GalleryModel.az.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\GalleryModel.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GalleryModel.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\Pages\GalleryModel.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GalleryModel.en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\GalleryModel.az.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GalleryModel.az.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\GalleryModel.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GalleryModel.ru.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
