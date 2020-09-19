@@ -21,4 +21,22 @@
     <data name="title" xml:space="preserve">
         <value>Gallery</value>
     </data>
+    <data name="subtitle" xml:space="preserve">
+        <value>You can get acquainted with our charming handicrafts.</value>
+    </data>
+    <data name="qranit" xml:space="preserve">
+        <value>Granite</value>
+    </data>
+    <data name="seramik" xml:space="preserve">
+        <value>Ceramic</value>
+    </data>
+    <data name="metlax" xml:space="preserve">
+        <value>Marbel</value>
+    </data>
+    <data name="all" xml:space="preserve">
+        <value>All</value>
+    </data>
+    <data name="boyut" xml:space="preserve">
+        <value>Zoom in</value>
+    </data>
 </root>

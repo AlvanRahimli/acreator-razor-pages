@@ -1,74 +1,45 @@
 ﻿@page "/about"
 @model PrivacyModel
+@inject IStringLocalizer<PrivacyModel> Localizer
 @{
-    ViewData["Title"] = "HAQQIMIZDA";
     ViewData["about"] = "current";
 }
 
 <section class="bg-white inner-banner pages">
 
-                <div class="container pad-container">
-                    <div class="col-md-12">
-                        <h1 class="text-center">@ViewData["Title"]</h1>
-                        <h3 class="text-center">Bizim kim olduğumuzu öyrünməyə hazırsınız?</h3>
-                    </div>
-                </div>
+    <div class="container pad-container">
+        <div class="col-md-12">
+            <h1 class="text-center">@Localizer["title"]</h1>
+        </div>
+    </div>
 
-            </section>
-            <!-- / inner banner -->
+</section>
+<!-- / inner banner -->
 
-            <!-- intro section -->
-            <section class="bg-white">
-                <div class="container pad-container2">
+<!-- intro section -->
+<section class="bg-white">
+    <div class="container pad-container2">
 
-                    <div class="row t-pad20">
+        <div class="row t-pad20">
 
-                        <div class="col-md-4">
-                            <img src="images/content/aboutimg.jpg" alt="" class="card-img-top">
-                            <h3 class="text-center abouttitle">Biz kimik?</h3>
-                            <p class="text-center abouttext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris.</p>
-                            
-                           
-                        </div>
+            <div class="col-md-4">
+                <img src="images/content/aboutimg.jpg" alt="" class="card-img-top">
+                <h3 class="text-center abouttitle">@Localizer["who"]</h3>
+                <p class="text-center abouttext">@Localizer["who-ans"]</p>
+            </div>
 
-                        <div class="col-md-4">
-                            <img src="images/content/aboutimg.jpg" alt="" class="card-img-top">
-                            <h3 class="text-center abouttitle">Nə edirik?</h3>
-                            <p class="text-center abouttext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris.</p>
-                            
+            <div class="col-md-4">
+                <img src="images/content/aboutimg.jpg" alt="" class="card-img-top">
+                <h3 class="text-center abouttitle">@Localizer["what"]</h3>
+                <p class="text-center abouttext">@Localizer["what-ans"]</p>
+            </div>
 
-                        </div>
-
-                        <div class="col-md-4">
-                            <img src="images/content/aboutimg.jpg" alt="" class="card-img-top">
-                            <h3 class="text-center abouttitle">Niyə bizi seçdiniz?</h3>
-                            <p class="text-center abouttext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                exercitation ullamco laboris.</p>
-                            
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-            </section>
-            <!--/ intro section -->
+            <div class="col-md-4">
+                <img src="images/content/aboutimg.jpg" alt="" class="card-img-top">
+                <h3 class="text-center abouttitle">@Localizer["why"]</h3>
+                <p class="text-center abouttext">@Localizer["why-ans"]</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ intro section -->

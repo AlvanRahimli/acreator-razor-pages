@@ -7,13 +7,12 @@
     var images = ViewData["images"] as List<Image>;
 }
 
-            <!-- inner banner -->
 <section class="bg-white inner-banner pages">
 
 <div class="container pad-container">
     <div class="col-md-12">
-        <h1 class="text-center">@Localizer["title"].Value | @Localizer["title"]</h1>
-        <h3 class="text-center">Qalareyada əl işlərimizlə tanış ola bilərsiniz</h3>
+        <h1 class="text-center">@Localizer["title"].Value</h1>
+        <h3 class="text-center">@Localizer["subtitle"].Value</h3>
     </div>
 </div>
 
@@ -23,67 +22,32 @@
 <!-- portfolio section -->
 <section>
 
-<div class="container pad-container2">
+    <div class="container pad-container2">
 
-<!-- projects filter -->
-<div class="filter text-left">
-    <a href="#" class="filter active" data-filter="*">Hamısı</a>
-    <a href="#" class="filter" data-filter=".metlax">Metlax</a>
-    <a href="#" class="filter" data-filter=".granit">Granit</a>
-    <a href="#" class="filter" data-filter=".seramik">Seramik</a>
-</div>
-<!-- /projects filter -->
+        <!-- projects filter -->
+        <div class="filter text-left">
+            <a href="#" class="filter active" data-filter="*">@Localizer["all"]</a>
+            <a href="#" class="filter" data-filter=".marbel">@Localizer["metlax"]</a>
+            <a href="#" class="filter" data-filter=".granit">@Localizer["qranit"]</a>
+            <a href="#" class="filter" data-filter=".seramik">@Localizer["seramik"]</a>
+        </div>
+        <!-- /projects filter -->
 
-<!-- projects grid -->
-<ul class="projects-grid-3 project-grid-gut hide-titles" id="project-grid">
-    @if (images != null)
-    {@foreach (var img in images)
-    {
-        <li class="project-item mix @img.Alt">
-            <div class="project-img">
-                <img class="project-img" src="http://localhost:5000/@img.Url" alt="@img.Alt" />
-            </div>
-            <div class="project-intro">
-                <h3 class="project-title"><a href="http://localhost:5000/@img.Url">Tam Bax</a></h3>
-            </div>
-        </li>
-    }}
-</ul>
-<!-- / projects grid -->
-
-<!--/ pagination -->
-
-        
-@*<div class="pagination pagination-top">
-    <ul>
-        <li><a href="#">Geri</a>
-        </li>
-        <li><a href="#" class="current">1</a>
-        </li>
-        <li><a href="#">2</a>
-        </li>
-        <li><a href="#">3</a>
-        </li>
-        <li><a href="#">İrəli</a>
-        </li>
-    </ul>
-</div>*@
-
-</div>
-
-
-</section>
-<!--/ portfolio section -->
-
-
-
-<!-- tagline section -->
-<section class="bot-subscribe ">
-    <div class="container">
-
-
-
+        <!-- projects grid -->
+        <ul class="projects-grid-3 project-grid-gut hide-titles" id="project-grid">
+            @if (images != null)
+            {@foreach (var img in images)
+            {
+                <li class="project-item mix @img.Alt">
+                    <div class="project-img">
+                        <img class="project-img" src="http://localhost:5000/@img.Url" alt="@img.Alt" />
+                    </div>
+                    <div class="project-intro">
+                        <h3 class="project-title"><a href="http://localhost:5000/@img.Url">@Localizer["boyut"]</a></h3>
+                    </div>
+                </li>
+            }}
+        </ul>
+    <!-- / projects grid -->
     </div>
-
 </section>
-<!--/ tagline section -->

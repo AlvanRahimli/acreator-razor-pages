@@ -1,5 +1,7 @@
 ﻿@page
+@using Microsoft.AspNetCore.Mvc.Localization
 @model IndexModel
+@inject IStringLocalizer<IndexModel> Localizer
 @{
     ViewData["Title"] = "Home page";
     Layout = null;
@@ -31,11 +33,9 @@
     <link rel="stylesheet" type="text/css" href="~/css/fonts/fontello.css">
     <link rel="stylesheet" type="text/css" href="~/css/fonts/gizmo.css">
     <link rel="stylesheet" type="text/css" href="~/css/fonts/picons.css">
-    @*<link rel="stylesheet" type="text/css" href="switcher/switcher.css">*@
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link href="~/css/aos.css" rel="stylesheet">
     <!-- Modernizr js file ================================================== -->
-    <script src="js/modernizr.custom.js"></script>
+    <script src="~/js/modernizr.custom.js"></script>
 </head>
 
 <body>
@@ -60,14 +60,15 @@
                         <form action="#" id="header-search-form" method="get">
                             <a class="close-search" href="#"><i class="ss-delete"></i></a>
                             <input type="text" id="header-search" name="s" value="Axtar..." autocomplete="off"
-                                   onfocus="if (this.value == 'Axtar...')this.value = '';"
-                                   onblur="if (this.value == '')this.value = 'Axtar...';" />
+                                   onfocus="if (this.value === 'Axtar...')this.value = '';"
+                                   onblur="if (this.value === '')this.value = 'Axtar...';" />
                         </form>
                     </div>
                     <h6>&nbsp;</h6>
                 </div>
             </section>
             <!--/ search -->
+            
             <!-- top bar -->
             <div class="topbar"></div>
 
@@ -78,7 +79,7 @@
                         <li><i class="icon-clock-1"></i> Həftə içi sizin xidmətinizdəyik</li>
                     </ul>
                 </div>
-                <div class="col-md-6 right">
+                <div class="col-md-6 right" style="display: none">
                     <ul class="toplink">
                         <li>
                             <a href="#">Qısayollar</a>
@@ -103,12 +104,13 @@
                 <div class="col-sm-3 col-xs-12">
                     <div class="basic-wrapper">
                         <a class="mobile-menu" data-toggle="collapse" data-target=".navbar-collapse"><i
-                                class='icon-menu'></i></a>
-                        <a class="logo" href="/"><img src="images/logo.png" alt="acreator-az_logo" />
+                                class="icon-menu" ></i></a>
+                        <a class="logo" href="/" style="margin-top: 0">
+                            <img src="images/logo.png" alt="acreator-az logo"/>
                         </a>
                     </div>
                 </div>
-
+                
                 <div class="col-sm-9 col-xs-12">
                     <ul class="top-contact">
                         <li>
@@ -144,64 +146,77 @@
                 </div>
 
             </div>
-            <!--/ logo bar -->
+        <!--/ logo bar -->
+        
+            @* SEPERATOR *@
+            <div style="height: 25px"></div>
             <!-- nav bar -->
             <div class="bg-navbar"></div>
-            <div class="container">
-
+        <div class="container">
+            <div style="z-index: 2; max-height: 0;">
+                
                 <div class="collapse navbar-collapse right">
-
                     <!-- navigation -->
                     <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="/" class="js-activated">Ana səhifə</a>
+                        <li class="nav-item">
+                            <a href="/">@Localizer["nav-home"]</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="/gallery">Qalereya</a>
+                        <li class="nav-item">
+                            <a href="/gallery">@Localizer["nav-gallery"]</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="/about">Haqqımızda</a>
+                        <li class="nav-item">
+                            <a href="/about">@Localizer["nav-about"]</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="/products">Məhsullar</a>
+                        <li class="nav-item">
+                            <a href="/products">@Localizer["nav-products"]</a>
                         </li>
-                        <li class="dropdown">
-                            <a href="/contact">Əlaqə</a>
+                        <li class="nav-item">
+                            <a href="/contact">@Localizer["nav-contact"]</a>
                         </li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle js-activated">Dil seç</a>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle js-activated">@Localizer["nav-selectLang"]</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#"><img src="images/flag/azerbaijan.svg" width="20px"
-                                            height="20px" alt="" class="languageicon"><span class="lanicon">AZ</span>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/flag/azerbaijan.svg" width="20px"
+                                             height="20px" alt="" class="languageicon"><span class="lanicon">AZ</span>
                                     </a>
                                 </li>
-                                <li><a href="#"><img src="images/flag/england.svg" width="20px"
-                                            height="20px" alt="" class="languageicon"><span
+                                <li>
+                                    <a href="#">
+                                        <img src="images/flag/england.svg" width="20px"
+                                             height="20px" alt="" class="languageicon">
+                                        <span
                                             class="lanicon">EN</span></a>
                                 </li>
-                                <li><a href="#"><img src="images/flag/russia.svg" width="20px" height="20px"
-                                            alt="" class="languageicon"><span class="lanicon">RU</span> </a>
+                                <li>
+                                    <a href="#">
+                                        <img src="images/flag/russia.svg" width="20px" height="20px"
+                                             alt="" class="languageicon"><span class="lanicon">RU</span> </a>
                                 </li>
                             </ul>
                         </li>
                         <li>
                             <ul class="social-top">
-                                <li><a href="#" class="twitter-alt" title="Twitter" data-rel="tooltip"
-                                        data-placement="top"><i class="icon-twitter"></i></a>
+                                <li>
+                                    <a href="#" class="twitter-alt" title="Twitter" data-rel="tooltip"
+                                       data-placement="top"><i class="icon-twitter"></i></a>
                                 </li>
-                                <li><a href="#" class="facebook-alt" title="Facebook" data-rel="tooltip"
-                                        data-placement="top"><i class="icon-facebook"></i></a>
+                                <li>
+                                    <a href="#" class="facebook-alt" title="Facebook" data-rel="tooltip"
+                                       data-placement="top"><i class="icon-facebook"></i></a>
                                 </li>
-                                <li><a href="#" class="google-alt" title="Google Plus" data-rel="tooltip"
-                                        data-placement="top"><i class="icon-instagram"></i></a>
+                                <li>
+                                    <a href="#" class="google-alt" title="Instagram" data-rel="tooltip"
+                                       data-placement="top"><i class="icon-instagram"></i></a>
                                 </li>
                             </ul>
                         </li>
 
                     </ul>
                     <!-- /navigation -->
-
                 </div>
             </div>
+        </div>
 
 
             <!-- revolution slider -->
@@ -218,67 +233,15 @@
                                      data-easing="Sine.easeOut">
                                     <h3>ACreator</h3>
                                     <h2>Just <span>Marbellous!</span></h2>
-                                    <p>Mərmər, Qranit, Seramik satışı və Ağlay işləri</p>
+                                    <p>@Localizer["title"]</p>
                                 </div>
 
                                 <div class="caption sfr" data-x="10" data-y="444" data-speed="300" data-start="1400"
                                      data-easing="Sine.easeOut">
-                                    <a class="btn" href="/products" target="_self">Məhsullara keç >> </a>
+                                    <a class="btn" href="/products" target="_self">@Localizer["products-link"] >> </a>
                                 </div>
                             </li>
                         }}
-
-                        @*<li data-transition="fade">
-                        <img src="images/content/slider-bg2.jpg" alt="" />
-
-                        <div class="caption sfr upper" data-x="10" data-y="200" data-speed="300" data-start="1200"
-                             data-easing="Sine.easeOut">
-                            <h3>ACreator</h3>
-                            <h2>Just <span>Marbellous!</span></h2>
-                            <p>Mərmər, Qranit, Seramik satışı və Ağlay işləri</p>
-                        </div>
-
-                        <div class="caption sfr" data-x="10" data-y="444" data-speed="300" data-start="1400"
-                             data-easing="Sine.easeOut">
-                            <a class="btn" href="/products" target="_self">Məhsullara keç >> </a>
-                        </div>
-
-                    </li>
-
-                    <li data-transition="fade">
-                        <img src="images/content/slider-bg3.jpg" alt="" />
-
-                        <div class="caption sfr upper" data-x="10" data-y="200" data-speed="300" data-start="1200"
-                             data-easing="Sine.easeOut">
-                            <h3>ACreator</h3>
-                            <h2>Just <span>Marbellous!</span></h2>
-                            <p>Mərmər, Qranit, Seramik satışı və Ağlay işləri</p>
-                        </div>
-
-                        <div class="caption sfr" data-x="10" data-y="444" data-speed="300" data-start="1400"
-                             data-easing="Sine.easeOut">
-                            <a class="btn" href="/products" target="_self">Məhsullara keç >> </a>
-                        </div>
-
-                    </li>
-
-                    <li data-transition="fade">
-                        <img src="images/content/slider-bg4.jpg" alt="" />
-
-                        <div class="caption sfr upper" data-x="10" data-y="200" data-speed="300" data-start="1200"
-                             data-easing="Sine.easeOut">
-                            <h3>ACreator</h3>
-                            <h2>Just <span>Marbellous!</span></h2>
-                            <p>Mərmər, Qranit, Seramik satışı və Ağlay işləri</p>
-                        </div>
-
-                        <div class="caption sfr" data-x="10" data-y="444" data-speed="300" data-start="1400"
-                             data-easing="Sine.easeOut">
-                            <a class="btn" href="/products" target="_self">Məhsullara keç >> </a>
-                        </div>
-
-                    </li>*@
-
                     </ul>
                     <div class="tp-bannertimer tp-bottom"></div>
                 </div>
@@ -294,7 +257,7 @@
                         <div class="col-sm-8 t-pad40 b-pad30">
                             <h3 class="color-white">
                                 ACreator - Just Marbellous! <br>
-                                Mərmər, Qranit, Seramik satışı və Ağlay işləri
+                                @Localizer["title"]
                             </h3>
                         </div>
 
@@ -321,7 +284,7 @@
                                         <p class="b-mgr20">
                                             <img src="images/gallery/p3.jpeg" class="pic" alt="">
                                         </p>
-                                        <h3 class="introtitles">Ağlay</h3>
+                                        <h3 class="introtitles">Aglay</h3>
                                     </div>
                                 </div>
                             </div>
@@ -332,7 +295,7 @@
                                         <p class="b-mgr20">
                                             <img src="images/gallery/p5.jpeg" class="pic" alt="">
                                         </p>
-                                        <h3 class="introtitles">Mərmər</h3>
+                                        <h3 class="introtitles">Marbel</h3>
                                     </div>
                                 </div>
                             </div>
@@ -344,8 +307,8 @@
                                 <div class="q-form-title">
                                     <i class="icon-picons-building"></i>
                                     <div class="content">
-                                        <p>Sualınız var?</p>
-                                        <h3>Bizə Yazın</h3>
+                                        <p>@Localizer["question"]</p>
+                                        <h3>@Localizer["sub-quest"]</h3>
                                     </div>
                                 </div>
 
@@ -639,8 +602,8 @@
         </div>
     </div>
     <!--/content wrapper -->
-    <!-- JS Files================================================== -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JS Files ================================================== -->
+    <script src="~/js/aos.js"></script>
     <script src="~/js/jquery.min.js"></script>
     <script src="~/js/jquery.themepunch.plugins.min.js"></script>
     <script src="~/js/jquery.themepunch.revolution.min.js"></script>

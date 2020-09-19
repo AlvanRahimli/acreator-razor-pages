@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="nav-home" xml:space="preserve">
+        <value>Домой</value>
+    </data>
+    <data name="nav-gallery" xml:space="preserve">
+        <value>Галерея</value>
+        <comment>nav-gallery</comment>
+    </data>
+    <data name="nav-about" xml:space="preserve">
+        <value>Около</value>
+        <comment>nav-about</comment>
+    </data>
+    <data name="nav-products" xml:space="preserve">
+        <value>Товары</value>
+        <comment>nav-products</comment>
+    </data>
+    <data name="nav-contact" xml:space="preserve">
+        <value>Связаться с нами</value>
+        <comment>nav-contact</comment>
+    </data>
+    <data name="nav-selectLang" xml:space="preserve">
+        <value>Язык</value>
+        <comment>nav-selectLang</comment>
+    </data>
+    <data name="footer-info" xml:space="preserve">
+        <value>ACreator (acreator.az) - компания №1 по продажам мрамора, гранита, керамики и глины в Азербайджане. Мы предоставляем нашим клиентам услуги высочайшего уровня с 2005 года.</value>
+    </data>
+    <data name="footer-hours" xml:space="preserve">
+        <value>Рабочие часы</value>
+    </data>
+    <data name="sat" xml:space="preserve">
+        <value>Cуббота</value>
+        <comment>sat</comment>
+    </data>
+    <data name="sun" xml:space="preserve">
+        <value>Воскресенье</value>
+        <comment>sun</comment>
+    </data>
+</root>

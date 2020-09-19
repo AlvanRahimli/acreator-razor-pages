@@ -1,72 +1,59 @@
 @page "/contact"
 @model ContactModel
+@inject IStringLocalizer<ContactModel> Localizer
 @{
-    ViewData["Title"] = "ƏLAQƏ";
     ViewData["contact"] = "current";
 }
 
 <section class="bg-white inner-banner pages">
-
     <div class="container pad-container">
         <div class="col-md-12">
-            <h1 class="text-center contacttitle">@ViewData["Title"]</h1>
-            <h3 class="text-center contacttext">Aşağıdakı məlumatlarla yaranmış sualları bizə ünvanlaya bilərsiniz.</h3>
+            <h1 class="text-center contacttitle">@Localizer["title"]</h1>
+            @* <h3 class="text-center contacttext">@Localizer["subtitle"]</h3> *@
         </div>
     </div>
-
 </section>
 <!-- / inner banner -->
 
 <!-- intro section -->
 <section class="bg-white">
     <div class="container pad-container">
-
         <div class="row col-md-12 text-center">
-            <h2 class="heading">Bizə yazın</h2>
-            <p>Lorem ipsum dolor consectetur elit sed do eiusmod tempor incididunt ut labore.</p>
+            <h2 class="heading">@Localizer["write-us"]</h2>
+            <p>@Localizer["sub-write-us"]</p>
         </div>
-
         <div class="clearfix"></div>
-
         <div class="row t-pad40">
-
             <div class="col-md-6">
-
                 <div class="form-container">
                     <div class="response alert alert-success"></div>
-                    <form method="post" id="contact-form" action="contact.php">
-
+                    <form method="post" id="contact-form">
                         <div class="row b-mgr20">
                             <div class="col-sm-6">
-                                <input name="fname" type="text" value="" placeholder="Ad *" />
+                                <input name="fname" type="text" value="" placeholder="Name *" />
                             </div>
-                            <div class="col-sm-6">
-                                <input name="lname" type="text" value="" placeholder="Soyad *" />
-                            </div>
+                            @* <div class="col-sm-6"> *@
+                            @*     <input name="lname" type="text" value="" placeholder="Soyad *" /> *@
+                            @* </div> *@
                         </div>
                         <div class="row b-mgr20">
                             <div class="col-sm-6">
-                                <input name="email" type="text" value="" placeholder="Email ünvanınız" />
-                            </div>
-                            <div class="col-sm-6">
-                                <input name="website" type="text" value="" placeholder="Saytınız" />
+                                <input name="email" type="text" value="" placeholder="Email" />
                             </div>
                         </div>
                         <div class="row b-mgr20">
                             <div class="col-sm-12">
-                                <textarea name="message" cols="40" rows="3" placeholder="Mesajınız"></textarea>
+                                <textarea name="message" cols="40" rows="3" placeholder="Message"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <input type="submit" class="btn-submit" value="Göndər">
+                                <input type="submit" class="btn-submit" value="@Localizer["send"]">
                             </div>
                         </div>
-                        <p class="small">* Məlumatınızı heç kimlə paylaşmırıq. Daha çox məlumat üçün <a href="#">Məxfilik haqqında</a> keçidinə daxil olun. </p>
-
+                        <p class="small">* @Localizer["telemetry"]</p>
                     </form>
                 </div>
-
             </div>
 
             <div class="col-md-6">

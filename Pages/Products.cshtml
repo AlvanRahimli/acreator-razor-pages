@@ -1,7 +1,8 @@
 @page "/products/"
 @model ProductsModel
+@inject IStringLocalizer<ProductsModel> Localizer
 @{
-    List<Product> products = ViewData["ReturnedProducts"] as List<Product>;
+    var products = ViewData["ReturnedProducts"] as List<Product>;
 }
 
 <!-- inner banner -->
@@ -9,8 +10,8 @@
 
     <div class="container pad-container">
         <div class="col-md-12">
-            <h1 class="text-center shoptitle">@ViewData["Title"]</h1>
-            <h3 class="text-center shoptext">@ViewData["Subtitle"]</h3>
+            <h1 class="text-center shoptitle">@Localizer["title"]</h1>
+            <h3 class="text-center shoptext">@Localizer["subtitle"]</h3>
         </div>
     </div>
 
@@ -27,10 +28,10 @@
             <div class="product-grid col3">
 
                 <div class="filter text-left">
-                    <a href="#" class="filter active" data-filter="*">Hamısı</a>
-                    <a href="#" class="filter" data-filter=".metlax">Metlax</a>
-                    <a href="#" class="filter" data-filter=".seramik">Seramik</a>
-                    <a href="#" class="filter" data-filter=".granit">Granit</a>
+                    <a href="#" class="filter active" data-filter="*">@Localizer["all"]</a>
+                    <a href="#" class="filter" data-filter=".marmar">@Localizer["marbel"]</a>
+                    <a href="#" class="filter" data-filter=".seramik">@Localizer["seramik"]</a>
+                    <a href="#" class="filter" data-filter=".granit">@Localizer["granit"]</a>
                 </div>
                 @if (products != null)
                     {@foreach (var product in products)
@@ -56,25 +57,7 @@
 
             <div class="clearfix"></div>
             <div class="sep30"></div>
-            @*<div class="pagination">
-                <ul>
-                    <li><a href="#">Prev</a>
-                    </li>
-                    <li><a href="#" class="current">1</a>
-                    </li>
-                    <li><a href="#">2</a>
-                    </li>
-                    <li><a href="#">3</a>
-                    </li>
-                    <li><a href="#">Next</a>
-                    </li>
-                </ul>
-            </div>*@
-
         </div>
-
-        
-
     </div>
 </section>
 <!--/ product section -->

@@ -1,6 +1,12 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=978907C9_002D4355_002D48D5_002D8421_002D556E6916868B_002Fd_003APages_002Ff_003AIndex_002Ecshtml/@EntryIndexedValue">ForceIncluded</s:String>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=acreator_002Dfront_002FResources_002FPages_002FGalleryModel/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=acreator_002Dfront_002FResources_002FPages_002FContactModel/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=acreator_002Dfront_002FResources_002FPages_002FGalleryModel/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=acreator_002Dfront_002FResources_002FPages_002FIndexModel/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=acreator_002Dfront_002FResources_002FPages_002FPrivacyModel/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=acreator_002Dfront_002FResources_002FPages_002FProductModel/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=acreator_002Dfront_002FResources_002FPages_002FProductsModel/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=acreator_002Dfront_002FResources_002FPages_002FShared_002F_005FLayout/@EntryIndexedValue">False</s:Boolean>
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/OrderByFullPath/@EntryValue">False</s:Boolean>

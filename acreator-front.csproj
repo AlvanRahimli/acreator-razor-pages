@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>acreator_front</RootNamespace>
+    <AssemblyName>acreator_front</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="wwwroot\images\favicon.ico" />
@@ -92,6 +93,78 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>GalleryModel.ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\Shared\_Layout.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>_Layout.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\Shared\_Layout.az.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>_Layout.az.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\Shared\_Layout.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>_Layout.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\IndexModel.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IndexModel.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\IndexModel.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IndexModel.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\IndexModel.az.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IndexModel.az.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\ProductsModel.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductsModel.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\ProductsModel.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductsModel.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\ProductsModel.az.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductsModel.az.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\ProductModel.az.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductModel.az.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\ProductModel.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductModel.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\ProductModel.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProductModel.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\PrivacyModel.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrivacyModel.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\PrivacyModel.az.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrivacyModel.az.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\PrivacyModel.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrivacyModel.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\ContactModel.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContactModel.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\ContactModel.ru.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContactModel.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\ContactModel.az.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ContactModel.az.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\Pages\GalleryModel.en.Designer.cs">
@@ -108,6 +181,96 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>GalleryModel.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\Shared\_Layout.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>_Layout.en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\Shared\_Layout.az.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>_Layout.az.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\Shared\_Layout.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>_Layout.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\IndexModel.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IndexModel.en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\IndexModel.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IndexModel.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\IndexModel.az.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IndexModel.az.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\ProductsModel.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProductsModel.en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\ProductsModel.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProductsModel.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\ProductsModel.az.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProductsModel.az.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\ProductModel.az.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProductModel.az.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\ProductModel.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProductModel.en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\ProductModel.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProductModel.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\PrivacyModel.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PrivacyModel.en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\PrivacyModel.az.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PrivacyModel.az.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\PrivacyModel.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PrivacyModel.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\ContactModel.en.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ContactModel.en.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\ContactModel.ru.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ContactModel.ru.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\Pages\ContactModel.az.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ContactModel.az.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

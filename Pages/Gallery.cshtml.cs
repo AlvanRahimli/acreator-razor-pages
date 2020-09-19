@@ -42,8 +42,6 @@ namespace acreator_front.Pages
 
                 ViewData["images"] = serialized.Data;
             }
-            var title = _localizer["title"].Value;
-            Console.WriteLine(title);
         }
     }
 }

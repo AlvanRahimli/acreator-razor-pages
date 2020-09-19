@@ -50,5 +50,41 @@ namespace acreator_front.Resources.Pages {
                 return ResourceManager.GetString("title", resourceCulture);
             }
         }
+        
+        internal static string subtitle {
+            get {
+                return ResourceManager.GetString("subtitle", resourceCulture);
+            }
+        }
+        
+        internal static string qranit {
+            get {
+                return ResourceManager.GetString("qranit", resourceCulture);
+            }
+        }
+        
+        internal static string seramik {
+            get {
+                return ResourceManager.GetString("seramik", resourceCulture);
+            }
+        }
+        
+        internal static string metlax {
+            get {
+                return ResourceManager.GetString("metlax", resourceCulture);
+            }
+        }
+        
+        internal static string all {
+            get {
+                return ResourceManager.GetString("all", resourceCulture);
+            }
+        }
+        
+        internal static string boyut {
+            get {
+                return ResourceManager.GetString("boyut", resourceCulture);
+            }
+        }
     }
 }

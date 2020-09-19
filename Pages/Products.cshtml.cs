@@ -39,10 +39,9 @@ namespace acreator_front.Pages
             {
                 ViewData["ReturnedProducts"] = null;
             }
-
-            ViewData["Title"] = "MƏHSULLAR";
-            ViewData["products"] = "current";
-            ViewData["Subtitle"] = "Məhsullarımızın arasından seçim edərək sifariş edə bilərsiniz.";
+            
+            ViewData["products"] = "current"; 
+            // ViewData["Subtitle"] = "Məhsullarımızın arasından seçim edərək sifariş edə bilərsiniz.";
         }
     }
 }

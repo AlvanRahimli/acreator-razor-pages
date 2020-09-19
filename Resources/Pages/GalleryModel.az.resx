@@ -21,4 +21,22 @@
     <data name="title" xml:space="preserve">
         <value>Qalareya</value>
     </data>
+    <data name="subtitle" xml:space="preserve">
+        <value>Füsunkar əl işlərimizlə tanış ola bilərsiniz.</value>
+    </data>
+    <data name="qranit" xml:space="preserve">
+        <value>Qranit</value>
+    </data>
+    <data name="seramik" xml:space="preserve">
+        <value>Seramik</value>
+    </data>
+    <data name="metlax" xml:space="preserve">
+        <value>Mərmər</value>
+    </data>
+    <data name="all" xml:space="preserve">
+        <value>Hamısı</value>
+    </data>
+    <data name="boyut" xml:space="preserve">
+        <value>Böyüt</value>
+    </data>
 </root>

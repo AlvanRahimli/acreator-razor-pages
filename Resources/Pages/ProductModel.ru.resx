@@ -19,24 +19,30 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="title" xml:space="preserve">
-        <value>Галерея</value>
+        <value>Продукт</value>
     </data>
-    <data name="subtitle" xml:space="preserve">
-        <value>Вы можете познакомиться с нашими очаровательными поделками.</value>
+    <data name="order" xml:space="preserve">
+        <value>Заказать сейчас</value>
     </data>
-    <data name="metlax" xml:space="preserve">
-        <value>Марбель</value>
+    <data name="desc" xml:space="preserve">
+        <value>Описание</value>
     </data>
-    <data name="qranit" xml:space="preserve">
-        <value>Гранит</value>
+    <data name="about" xml:space="preserve">
+        <value>О продукте</value>
     </data>
-    <data name="seramik" xml:space="preserve">
-        <value>Керамика</value>
+    <data name="about-only" xml:space="preserve">
+        <value>Oколо</value>
     </data>
-    <data name="all" xml:space="preserve">
-        <value>Все</value>
+    <data name="measure" xml:space="preserve">
+        <value>Размеры</value>
     </data>
-    <data name="boyut" xml:space="preserve">
-        <value>Увеличить</value>
+    <data name="color" xml:space="preserve">
+        <value>Цвет</value>
+    </data>
+    <data name="material" xml:space="preserve">
+        <value>Материал</value>
+    </data>
+    <data name="square-price" xml:space="preserve">
+        <value>Цена за квадрат</value>
     </data>
 </root>

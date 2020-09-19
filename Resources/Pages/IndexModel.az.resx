@@ -18,25 +18,34 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
+    <data name="nav-home" xml:space="preserve">
+        <value>Ana səhifə</value>
+    </data>
+    <data name="nav-gallery" xml:space="preserve">
+        <value>Qalareya</value>
+    </data>
+    <data name="nav-about" xml:space="preserve">
+        <value>Haqqımızda</value>
+    </data>
+    <data name="nav-contact" xml:space="preserve">
+        <value>Əlaqə</value>
+    </data>
+    <data name="nav-products" xml:space="preserve">
+        <value>Məhsullar</value>
+    </data>
+    <data name="nav-selectLang" xml:space="preserve">
+        <value>Dil seç</value>
+    </data>
     <data name="title" xml:space="preserve">
-        <value>Галерея</value>
+        <value>Mərmər, Qranit, Seramik satışı və Ağlay işləri </value>
     </data>
-    <data name="subtitle" xml:space="preserve">
-        <value>Вы можете познакомиться с нашими очаровательными поделками.</value>
+    <data name="question" xml:space="preserve">
+        <value>Sualınız var?</value>
     </data>
-    <data name="metlax" xml:space="preserve">
-        <value>Марбель</value>
+    <data name="sub-quest" xml:space="preserve">
+        <value>Bizə yazın!</value>
     </data>
-    <data name="qranit" xml:space="preserve">
-        <value>Гранит</value>
-    </data>
-    <data name="seramik" xml:space="preserve">
-        <value>Керамика</value>
-    </data>
-    <data name="all" xml:space="preserve">
-        <value>Все</value>
-    </data>
-    <data name="boyut" xml:space="preserve">
-        <value>Увеличить</value>
+    <data name="products-link" xml:space="preserve">
+        <value>Məhsullara keç</value>
     </data>
 </root>

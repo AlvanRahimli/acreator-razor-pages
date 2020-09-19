@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="nav-home" xml:space="preserve">
+        <value>Ana səhifə</value>
+    </data>
+    <data name="nav-gallery" xml:space="preserve">
+        <value>Qalareya</value>
+        <comment>nav-gallery</comment>
+    </data>
+    <data name="nav-about" xml:space="preserve">
+        <value>Haqqımızda</value>
+        <comment>nav-about</comment>
+    </data>
+    <data name="nav-products" xml:space="preserve">
+        <value>Məhsullar</value>
+        <comment>nav-products</comment>
+    </data>
+    <data name="nav-contact" xml:space="preserve">
+        <value>Əlaqə</value>
+        <comment>nav-contact</comment>
+    </data>
+    <data name="nav-selectLang" xml:space="preserve">
+        <value>Dil seç</value>
+        <comment>nav-selectLang</comment>
+    </data>
+    <data name="footer-info" xml:space="preserve">
+        <value>ACreator (acreator.az) şirkəti Azərbaycanda #1 Mərmər, Qranit, Seramik satışı və Ağlay işləri şirkətidir. 2005-ci ildən müştərilərimizə ən yüksək xidməti göstəririk.</value>
+    </data>
+    <data name="footer-hours" xml:space="preserve">
+        <value>İş saatları</value>
+    </data>
+    <data name="sat" xml:space="preserve">
+        <value>Şənbə</value>
+        <comment>sat</comment>
+    </data>
+    <data name="sun" xml:space="preserve">
+        <value>Bazar</value>
+        <comment>sun</comment>
+    </data>
+</root>

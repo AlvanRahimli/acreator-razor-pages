@@ -2,6 +2,6 @@
 {
     public enum ProductType
     {
-        Metlax, Seramik, Granit
+        Marmar, Seramik, Granit
     }
 }

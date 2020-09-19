@@ -1,9 +1,9 @@
 ﻿@page "/product/{id:int}"
 @model acreator_front.Pages.ProductModel
+@inject IStringLocalizer<ProductModel> Localizer
 @{
     Layout = "_Layout";
     var id = RouteData.Values["id"];
-    ViewData["Title"] = "MƏHSUL HAQQINDA";
     var product = ViewData["product"] as Product;
 }
 
@@ -11,7 +11,7 @@
 
     <div class="container pad-container">
         <div class="col-md-12">
-            <h1 class="text-center producttitle">@ViewData["Title"]</h1>
+            <h1 class="text-center producttitle">@Localizer["title"]</h1>
             <h3 class="text-center producttext">@product.Name - &#8380;@((decimal)product.Price / 100)</h3>
         </div>
     </div>
@@ -48,7 +48,7 @@
                 @* ORDER MODAL *@
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-primary" data-toggle="modal" id="orderButton" data-target="#productModal">
-                    Sifariş et
+                    @Localizer["order"]
                 </button>
                 <!-- Modal -->
                 <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -94,16 +94,16 @@
 
         </div>
 
-        <div class="sep60"></div>
+        <div class="sep60" style="height: 60px;"></div>
 
         <div class="tabs tabs-top left tab-container">
 
             <ul class="etabs">
                 <li class="tab">
-                    <a href="#tab-1"> MƏSUL TƏSVİRİ</a>
+                    <a href="#tab-1">@Localizer["desc"]</a>
                 </li>
                 <li class="tab">
-                    <a href="#tab-2">MƏHSUL HAQQINDA</a>
+                    <a href="#tab-2">@Localizer["about"]</a>
                 </li>
             </ul>
 
@@ -117,23 +117,23 @@
                     <div class="container">
                         <table class="standard-table">
                             <tr>
-                                <th>Məhsul</th>
-                                <th>Haqqında</th>
+                                <th>@Localizer["title"]</th>
+                                <th>@Localizer["about-only"]</th>
                             </tr>
                             <tr>
-                                <td>Ölçülər</td>
+                                <td>@Localizer["measure"]</td>
                                 <td>@product.Measurement.Width sm x @product.Measurement.Height sm</td>
                             </tr>
                             <tr>
-                                <td>Rəng</td>
+                                <td>@Localizer["color"]</td>
                                 <td>@product.Color</td>
                             </tr>
                             <tr>
-                                <td>Material</td>
+                                <td>@Localizer["material"]</td>
                                 <td>@product.Type.ToString()</td>
                             </tr>
                             <tr>
-                                <td>Kvadratın qiyməti</td>
+                                <td>@Localizer["square-price"]</td>
                                 <td>&#8380; @((decimal)product.Price / 100)</td>
                             </tr>
                         </table>
