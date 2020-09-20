@@ -26,7 +26,7 @@
         <div class="row">
 
             <div class="col-sm-5">
-                <a href="/order/@product.Id"><img src="@("http://localhost:5000/" + product.ImageUrl)" alt="@product.Name" /></a>
+                <a href="#"><img src="@("http://localhost:5000/" + product.ImageUrl)" alt="@product.Name" /></a>
             </div>
 
             <div class="col-sm-6 product-details l-pad30">
@@ -37,7 +37,7 @@
                     <i class="icon-star-1"></i>
                     <i class="icon-star-1"></i>
                     <i class="icon-star-1"></i>
-                    <i class="icon-star-empty-1"></i>
+                    <i class="icon-star-1"></i>
                 </div>
                 <div class="price">&#8380; @((decimal)product.Price / 100)</div>
                 <p>@product.Type.ToString()</p>
@@ -114,30 +114,28 @@
                 </div>
 
                 <div class="tab-block" id="tab-2">
-                    <div class="container">
-                        <table class="standard-table">
-                            <tr>
-                                <th>@Localizer["title"]</th>
-                                <th>@Localizer["about-only"]</th>
-                            </tr>
-                            <tr>
-                                <td>@Localizer["measure"]</td>
-                                <td>@product.Measurement.Width sm x @product.Measurement.Height sm</td>
-                            </tr>
-                            <tr>
-                                <td>@Localizer["color"]</td>
-                                <td>@product.Color</td>
-                            </tr>
-                            <tr>
-                                <td>@Localizer["material"]</td>
-                                <td>@product.Type.ToString()</td>
-                            </tr>
-                            <tr>
-                                <td>@Localizer["square-price"]</td>
-                                <td>&#8380; @((decimal)product.Price / 100)</td>
-                            </tr>
-                        </table>
-                    </div>
+                    <table class="standard-table">
+                        <tr>
+                            <th>@Localizer["title"]</th>
+                            <th>@Localizer["about-only"]</th>
+                        </tr>
+                        <tr>
+                            <td>@Localizer["measure"]</td>
+                            <td>@product.Measurement.Width sm x @product.Measurement.Height sm</td>
+                        </tr>
+                        <tr>
+                            <td>@Localizer["color"]</td>
+                            <td>@product.Color</td>
+                        </tr>
+                        <tr>
+                            <td>@Localizer["material"]</td>
+                            <td>@product.Type.ToString()</td>
+                        </tr>
+                        <tr>
+                            <td>@Localizer["square-price"]</td>
+                            <td>&#8380; @((decimal)product.Price / 100)</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>

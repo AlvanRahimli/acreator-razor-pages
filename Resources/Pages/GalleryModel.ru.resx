@@ -39,4 +39,7 @@
     <data name="boyut" xml:space="preserve">
         <value>Увеличить</value>
     </data>
+    <data name="short-info" xml:space="preserve">
+        <value />
+    </data>
 </root>

@@ -48,4 +48,25 @@
     <data name="products-link" xml:space="preserve">
         <value>Go to products</value>
     </data>
+    <data name="sub-gallery" xml:space="preserve">
+        <value>You can get acquainted with our charming handicrafts.</value>
+    </data>
+    <data name="footer-info" xml:space="preserve">
+        <value>ACreator (acreator.az) is the # 1 Marble, Granite, Ceramic Sales and Clay Works Company in Azerbaijan. We have been providing the highest level of service to our customers since 2005.</value>
+    </data>
+    <data name="footer-hours" xml:space="preserve">
+        <value>Work hours</value>
+    </data>
+    <data name="design" xml:space="preserve">
+        <value>Design</value>
+    </data>
+    <data name="cut" xml:space="preserve">
+        <value>Cut</value>
+    </data>
+    <data name="support" xml:space="preserve">
+        <value>Support</value>
+    </data>
+    <data name="services" xml:space="preserve">
+        <value>Services</value>
+    </data>
 </root>

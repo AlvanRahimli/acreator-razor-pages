@@ -8,6 +8,31 @@
     <Content Remove="wwwroot\images\favicon.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="wwwroot\favicons\android-icon-144x144.png" />
+    <None Include="wwwroot\favicons\android-icon-192x192.png" />
+    <None Include="wwwroot\favicons\android-icon-36x36.png" />
+    <None Include="wwwroot\favicons\android-icon-48x48.png" />
+    <None Include="wwwroot\favicons\android-icon-72x72.png" />
+    <None Include="wwwroot\favicons\android-icon-96x96.png" />
+    <None Include="wwwroot\favicons\apple-icon-114x114.png" />
+    <None Include="wwwroot\favicons\apple-icon-120x120.png" />
+    <None Include="wwwroot\favicons\apple-icon-144x144.png" />
+    <None Include="wwwroot\favicons\apple-icon-152x152.png" />
+    <None Include="wwwroot\favicons\apple-icon-180x180.png" />
+    <None Include="wwwroot\favicons\apple-icon-57x57.png" />
+    <None Include="wwwroot\favicons\apple-icon-60x60.png" />
+    <None Include="wwwroot\favicons\apple-icon-72x72.png" />
+    <None Include="wwwroot\favicons\apple-icon-76x76.png" />
+    <None Include="wwwroot\favicons\apple-icon-precomposed.png" />
+    <None Include="wwwroot\favicons\apple-icon.png" />
+    <None Include="wwwroot\favicons\favicon-16x16.png" />
+    <None Include="wwwroot\favicons\favicon-32x32.png" />
+    <None Include="wwwroot\favicons\favicon-96x96.png" />
+    <None Include="wwwroot\favicons\favicon.ico" />
+    <None Include="wwwroot\favicons\ms-icon-144x144.png" />
+    <None Include="wwwroot\favicons\ms-icon-150x150.png" />
+    <None Include="wwwroot\favicons\ms-icon-310x310.png" />
+    <None Include="wwwroot\favicons\ms-icon-70x70.png" />
     <None Include="wwwroot\icon\facebook-f-brands.svg" />
     <None Include="wwwroot\icon\google-plus-g-brands.svg" />
     <None Include="wwwroot\icon\heart-solid.svg" />
@@ -272,5 +297,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>ContactModel.az.resx</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="favicons\manifest.json" />
   </ItemGroup>
 </Project>

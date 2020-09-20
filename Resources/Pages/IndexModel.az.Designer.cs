@@ -104,5 +104,47 @@ namespace acreator_front.Resources.Pages {
                 return ResourceManager.GetString("products-link", resourceCulture);
             }
         }
+        
+        internal static string sub_gallery {
+            get {
+                return ResourceManager.GetString("sub-gallery", resourceCulture);
+            }
+        }
+        
+        internal static string footer_info {
+            get {
+                return ResourceManager.GetString("footer-info", resourceCulture);
+            }
+        }
+        
+        internal static string footer_hours {
+            get {
+                return ResourceManager.GetString("footer-hours", resourceCulture);
+            }
+        }
+        
+        internal static string design {
+            get {
+                return ResourceManager.GetString("design", resourceCulture);
+            }
+        }
+        
+        internal static string cut {
+            get {
+                return ResourceManager.GetString("cut", resourceCulture);
+            }
+        }
+        
+        internal static string support {
+            get {
+                return ResourceManager.GetString("support", resourceCulture);
+            }
+        }
+        
+        internal static string services {
+            get {
+                return ResourceManager.GetString("services", resourceCulture);
+            }
+        }
     }
 }

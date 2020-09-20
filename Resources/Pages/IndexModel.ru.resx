@@ -48,4 +48,25 @@
     <data name="products-link" xml:space="preserve">
         <value>перейти к продуктам</value>
     </data>
+    <data name="sub-gallery" xml:space="preserve">
+        <value>Вы можете познакомиться с нашими очаровательными поделками.</value>
+    </data>
+    <data name="footer-info" xml:space="preserve">
+        <value>ACreator (acreator.az) - компания №1 по продажам мрамора, гранита, керамики и глины в Азербайджане. Мы предоставляем нашим клиентам услуги высочайшего уровня с 2005 года.</value>
+    </data>
+    <data name="footer-hours" xml:space="preserve">
+        <value>Рабочие часы</value>
+    </data>
+    <data name="design" xml:space="preserve">
+        <value>Дизайн</value>
+    </data>
+    <data name="cut" xml:space="preserve">
+        <value>cut russian</value>
+    </data>
+    <data name="support" xml:space="preserve">
+        <value>support russian</value>
+    </data>
+    <data name="services" xml:space="preserve">
+        <value>Сервисы</value>
+    </data>
 </root>

@@ -25,18 +25,19 @@
 
         <div class="col-sm-12 content">
 
-            <div class="product-grid col3">
-
-                <div class="filter text-left">
-                    <a href="#" class="filter active" data-filter="*">@Localizer["all"]</a>
-                    <a href="#" class="filter" data-filter=".marmar">@Localizer["marbel"]</a>
-                    <a href="#" class="filter" data-filter=".seramik">@Localizer["seramik"]</a>
-                    <a href="#" class="filter" data-filter=".granit">@Localizer["granit"]</a>
-                </div>
+            <div class="filter text-left">
+                <a href="#" class="filter active" data-filter="*">@Localizer["all"]</a>
+                <a href="#" class="filter" data-filter=".marmar">@Localizer["marbel"]</a>
+                <a href="#" class="filter" data-filter=".seramik">@Localizer["seramik"]</a>
+                <a href="#" class="filter" data-filter=".granit">@Localizer["granit"]</a>
+            </div>
+            @* <div class="product-grid col3" id="product-grid"> *@
+            <ul class="projects-grid-3 project-grid-gut" id="project-grid">
                 @if (products != null)
                     {@foreach (var product in products)
                     {
-                        <div class="post brd0 @product.Type.ToString().ToLower()">
+                        <li class="mix @product.Type.ToString().ToLower()" style="max-width: 350px; margin: 10px">
+                        @* <div class="post brd0 @product.Type.ToString().ToLower()"> *@
                             <figure>
                                 <a href="/product/@product.Id">
                                     <img id="pImage" src="@("http://localhost:5000/" + product.ImageUrl)"
@@ -50,10 +51,10 @@
                                     <span>&#8380;@((decimal)product.Price / 100)</span>
                                 </div>
                             </div>
-                        </div>
+                        </li>
                     }}
 
-            </div>
+            </ul>
 
             <div class="clearfix"></div>
             <div class="sep30"></div>

@@ -1,6 +1,6 @@
 ﻿$("#contact-form").submit((e) => {
 
-    var msgBody = {
+    let msgBody = {
         clientName: $("#clientName").val(),
         clientEmail: $("#clientEmail").val(),
         clientPhone: $("#clientPhone").val(),

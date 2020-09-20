@@ -86,5 +86,11 @@ namespace acreator_front.Resources.Pages {
                 return ResourceManager.GetString("boyut", resourceCulture);
             }
         }
+        
+        internal static string short_info {
+            get {
+                return ResourceManager.GetString("short-info", resourceCulture);
+            }
+        }
     }
 }

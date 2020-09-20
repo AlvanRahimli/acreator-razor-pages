@@ -48,4 +48,25 @@
     <data name="products-link" xml:space="preserve">
         <value>Məhsullara keç</value>
     </data>
+    <data name="sub-gallery" xml:space="preserve">
+        <value>Füsunkar əl işlərimizlə tanış ola bilərsiniz.</value>
+    </data>
+    <data name="footer-info" xml:space="preserve">
+        <value>ACreator (acreator.az) şirkəti Azərbaycanda #1 Mərmər, Qranit, Seramik satışı və Ağlay işləri şirkətidir. 2005-ci ildən müştərilərimizə ən yüksək xidməti göstəririk.</value>
+    </data>
+    <data name="footer-hours" xml:space="preserve">
+        <value>İş saatları</value>
+    </data>
+    <data name="design" xml:space="preserve">
+        <value>Dizayn</value>
+    </data>
+    <data name="cut" xml:space="preserve">
+        <value>Kəsim</value>
+    </data>
+    <data name="support" xml:space="preserve">
+        <value>Dəstək</value>
+    </data>
+    <data name="services" xml:space="preserve">
+        <value>Xidmətlərimiz</value>
+    </data>
 </root>
