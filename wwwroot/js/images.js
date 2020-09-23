@@ -12,7 +12,7 @@
     axios.defaults.headers.post["Authorization"] = "Bearer " + window.localStorage.getItem("token");
     axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
 
-    axios.post("http://localhost:5000/images/new", form)
+    axios.post("https://acreator.az/api/images/new", form)
         .then((response) => {
             console.log(response);
             alert("Şəkil əlavə olundu.");

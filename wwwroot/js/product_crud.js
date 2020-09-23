@@ -17,7 +17,8 @@
     axios.defaults.headers.post["Authorization"] = "Bearer " + window.localStorage.getItem("token");
     axios.defaults.headers.post["Content-Type"] = "multipart/form-data";
 
-    axios.post("http://localhost:5000/products/new", form)
+    axios.post("https://acreator.az/api/products/new", form)
+    // axios.post("http://localhost:5000/products/new", form)
         .then((response) => {
             console.log(response);
             alert("Məhsul əlavə olundu.")
@@ -37,7 +38,7 @@ $("#deleteForm").submit((e) => {
 
     axios.defaults.headers.post["Authorization"] = "Bearer " + window.localStorage.getItem("token");
 
-    axios.post("http://localhost:5000/products/delete/" + $("#pId").val())
+    axios.post("https://acreator.az/api/products/delete/" + $("#pId").val())
         .then((response) => {
             console.log(response);
             alert("Məhsul silindi.")
@@ -52,7 +53,7 @@ $("#deleteForm").submit((e) => {
 function changeStatus(id, status) {
     axios.defaults.headers.post["Authorization"] = "Bearer " + window.localStorage.getItem("token");
 
-    axios.post('http://localhost:5000/orders/set-status/' + id + '?status=' + status)
+    axios.post('https://acreator.az/api/orders/set-status/' + id + '?status=' + status)
         .then((response) => {
             alert("Sifarişin statusu yeniləndi.");
             window.location.reload();
@@ -68,7 +69,7 @@ function changeStatus(id, status) {
 function changeMsgStatus(id, status) {
     axios.defaults.headers.post["Authorization"] = "Bearer " + window.localStorage.getItem("token");
 
-    axios.post('http://localhost:5000/messages/set-status/' + id + '?status=' + status)
+    axios.post('https://acreator.az/api/messages/set-status/' + id + '?status=' + status)
         .then((response) => {
             alert("Sualın statusu yeniləndi.");
             window.location.reload();

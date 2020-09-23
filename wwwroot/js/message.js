@@ -7,7 +7,7 @@
         content: $("#msgContent").val()
     };
 
-    axios.post("http://localhost:5000/messages/new", msgBody)
+    axios.post("https://acreator.az/api/messages/new", msgBody)
         .then((response) => {
             console.log(response);
             alert("Sualınız qəbul olundu. Sizinlə əlaqə saxlanılacaq.");

@@ -6,7 +6,8 @@
 
     axios({
         method: "post",
-        url: "http://localhost:5000/auth/login",
+        url: "https://acreator.az/api/auth/login",
+        // url: "http://localhost:5000/auth/login",
         data: jsonData
     }).then((response) => {
         //console.log(response);

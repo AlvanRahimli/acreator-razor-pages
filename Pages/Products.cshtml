@@ -22,9 +22,7 @@
 <!-- Product section -->
 <section>
     <div class="container pad-container">
-
         <div class="col-sm-12 content">
-
             <div class="filter text-left">
                 <a href="#" class="filter active" data-filter="*">@Localizer["all"]</a>
                 <a href="#" class="filter" data-filter=".marmar">@Localizer["marbel"]</a>
@@ -40,7 +38,7 @@
                         @* <div class="post brd0 @product.Type.ToString().ToLower()"> *@
                             <figure>
                                 <a href="/product/@product.Id">
-                                    <img id="pImage" src="@("http://localhost:5000/" + product.ImageUrl)"
+                                    <img id="pImage" src="@("https://acreator.az/api/" + product.ImageUrl)"
                                          alt="@product.Name" width="350" height="400" />
                                 </a>
                             </figure>
@@ -53,9 +51,7 @@
                             </div>
                         </li>
                     }}
-
             </ul>
-
             <div class="clearfix"></div>
             <div class="sep30"></div>
         </div>

@@ -8,7 +8,7 @@
     form.append("contact", $("#contact").val());
     form.append("details", $("#details").val());
 
-    axios.post("http://localhost:5000/orders/new", form)
+    axios.post("https://acreator.az/api/orders/new", form)
         .then((response) => {
             console.log(response);
             alert("Sifariş qeydə alındı.");
