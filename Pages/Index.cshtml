@@ -146,88 +146,91 @@
                 </div>
 
             </div>
-        <!--/ logo bar -->
+         <!--/ logo bar -->
         
             @* SEPERATOR *@
             <div style="height: 25px"></div>
             <!-- nav bar -->
             <div class="bg-navbar"></div>
-        <div class="container">
-            <div style="z-index: 2; max-height: 0;">
-                
-                <div class="collapse navbar-collapse right">
-                    <!-- navigation -->
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item">
-                            <a href="/">@Localizer["nav-home"]</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/gallery">@Localizer["nav-gallery"]</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/about">@Localizer["nav-about"]</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/products">@Localizer["nav-products"]</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/contact">@Localizer["nav-contact"]</a>
-                        </li>
-                        <li class="dropdown"><a href="#" class="dropdown-toggle js-activated">@Localizer["nav-selectLang"]</a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="#">
-                                        <img src="images/flag/azerbaijan.svg" width="20px"
-                                             height="20px" alt="" class="languageicon"><span class="lanicon">AZ</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/flag/england.svg" width="20px"
-                                             height="20px" alt="" class="languageicon">
-                                        <span
-                                            class="lanicon">EN</span></a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="images/flag/russia.svg" width="20px" height="20px"
-                                             alt="" class="languageicon"><span class="lanicon">RU</span> </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <ul class="social-top">
-                                <li>
-                                    <a href="#" class="twitter-alt" title="Twitter" data-rel="tooltip"
-                                       data-placement="top"><i class="icon-twitter"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="facebook-alt" title="Facebook" data-rel="tooltip"
-                                       data-placement="top"><i class="icon-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="#" class="google-alt" title="Instagram" data-rel="tooltip"
-                                       data-placement="top"><i class="icon-instagram"></i></a>
-                                </li>
-                            </ul>
-                        </li>
+            
+            <div class="container">
+                <div style="z-index: 2; max-height: 0;">
+                    
+                    <div class="collapse navbar-collapse right">
+                        <!-- navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="/">@Localizer["nav-home"]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/gallery">@Localizer["nav-gallery"]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/about">@Localizer["nav-about"]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/products">@Localizer["nav-products"]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/contact">@Localizer["nav-contact"]</a>
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle js-activated">@Localizer["nav-selectLang"]</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flag/azerbaijan.svg" width="20px"
+                                                height="20px" alt="" class="languageicon"><span class="lanicon">AZ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flag/england.svg" width="20px"
+                                                height="20px" alt="" class="languageicon">
+                                            <span
+                                                class="lanicon">EN</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="images/flag/russia.svg" width="20px" height="20px"
+                                                alt="" class="languageicon"><span class="lanicon">RU</span> </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="social-top">
+                                    <li>
+                                        <a href="#" class="twitter-alt" title="Twitter" data-rel="tooltip"
+                                        data-placement="top"><i class="icon-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="facebook-alt" title="Facebook" data-rel="tooltip"
+                                        data-placement="top"><i class="icon-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="google-alt" title="Instagram" data-rel="tooltip"
+                                        data-placement="top"><i class="icon-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </li>
 
-                    </ul>
-                    <!-- /navigation -->
+                        </ul>
+                        <!-- /navigation -->
+                    </div>
                 </div>
+
             </div>
-        </div>
 
 
             <!-- revolution slider -->
-            <div class="banner-container revolution" style="/*padding-top: 35px*/">
+            <div class="banner-container revolution" style="">
                 <div class="banner">
                     <ul>
                         @if (images != null)
                         {@foreach (var img in images)
                         {
                             <li data-transition="fade">
-                                <img src="https://acreator.az/api/@img.Url" alt="@img.Alt" />
+                                @* <img src="https://acreator.az/api/@img.Url" alt="@img.Alt" /> *@
+                                <img src="https://acreator.az/api/Resources/Images/granit4676.jpeg" alt="@img.Alt" />
 
                                 <div class="caption sfr upper" data-x="10" data-y="200" data-speed="300" data-start="1200"
                                      data-easing="Sine.easeOut">
