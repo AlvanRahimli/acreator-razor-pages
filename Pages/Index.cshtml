@@ -152,10 +152,9 @@
             <div style="height: 25px"></div>
             <!-- nav bar -->
             <div class="bg-navbar"></div>
-            
-            <div class="container">
-                <div style="z-index: 2; max-height: 0;">
-                    
+        
+            <div style="margin-top: 30px;">
+                <div style="max-height: 0; position: relative; z-index: 99999;">
                     <div class="collapse navbar-collapse right">
                         <!-- navigation -->
                         <ul class="nav navbar-nav">
@@ -218,37 +217,35 @@
                     </div>
                 </div>
 
-            </div>
+                <!-- revolution slider -->
+                <div class="banner-container revalution" style="position: relative; z-index: -1;">
+                    <div class="banner">
+                        <ul>
+                            @if (images != null)
+                            {@foreach (var img in images)
+                            {
+                                <li data-transition="fade">
+                                    @* <img src="https://acreator.az/api/@img.Url" alt="@img.Alt" /> *@
+                                    <img src="https://acreator.az/api/Resources/Images/granit4676.jpeg" alt="@img.Alt" />
 
+                                    <div class="caption sfr upper" data-x="10" data-y="200" data-speed="300" data-start="1200"
+                                        data-easing="Sine.easeOut">
+                                        <h3>ACreator</h3>
+                                        <h2>Just <span>Marbellous!</span></h2>
+                                        <p>@Localizer["title"]</p>
+                                    </div>
 
-            <!-- revolution slider -->
-            <div class="banner-container revolution" style="">
-                <div class="banner">
-                    <ul>
-                        @if (images != null)
-                        {@foreach (var img in images)
-                        {
-                            <li data-transition="fade">
-                                @* <img src="https://acreator.az/api/@img.Url" alt="@img.Alt" /> *@
-                                <img src="https://acreator.az/api/Resources/Images/granit4676.jpeg" alt="@img.Alt" />
-
-                                <div class="caption sfr upper" data-x="10" data-y="200" data-speed="300" data-start="1200"
-                                     data-easing="Sine.easeOut">
-                                    <h3>ACreator</h3>
-                                    <h2>Just <span>Marbellous!</span></h2>
-                                    <p>@Localizer["title"]</p>
-                                </div>
-
-                                <div class="caption sfr" data-x="10" data-y="444" data-speed="300" data-start="1400"
-                                     data-easing="Sine.easeOut">
-                                    <a class="btn" href="/products" target="_self">@Localizer["products-link"] >> </a>
-                                </div>
-                            </li>
-                        }}
-                    </ul>
-                    <div class="tp-bannertimer tp-bottom"></div>
+                                    <div class="caption sfr" data-x="10" data-y="444" data-speed="300" data-start="1400"
+                                        data-easing="Sine.easeOut">
+                                        <a class="btn" href="/products" target="_self">@Localizer["products-link"] >> </a>
+                                    </div>
+                                </li>
+                            }}
+                        </ul>
+                        <div class="tp-bannertimer tp-bottom"></div>
+                    </div>
+                    <!-- /.banner -->
                 </div>
-                <!-- /.banner -->
             </div>
             <!-- /.fullwidthbanner-container -->
             <!-- tagline section -->
