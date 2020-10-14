@@ -37,7 +37,7 @@
         <value>Select language</value>
     </data>
     <data name="title" xml:space="preserve">
-        <value>Sale of Marble, Granite, Ceramics and Clay Works</value>
+        <value>Sale of Marble, Granite, Ceramics and facade Works</value>
     </data>
     <data name="question" xml:space="preserve">
         <value>Do you have a question?</value>
@@ -68,5 +68,11 @@
     </data>
     <data name="services" xml:space="preserve">
         <value>Services</value>
+    </data>
+    <data name="sub-design" xml:space="preserve">
+        <value>The interior and exterior design of your house or facilities are made by our highly experienced architects according to your wishes.</value>
+    </data>
+    <data name="sub-cut" xml:space="preserve">
+        <value>The interior and exterior design of your home or facilities are meticulously designed and delivered to you by our highly experienced architects.</value>
     </data>
 </root>

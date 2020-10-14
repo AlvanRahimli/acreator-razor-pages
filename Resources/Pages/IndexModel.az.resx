@@ -37,7 +37,7 @@
         <value>Dil seç</value>
     </data>
     <data name="title" xml:space="preserve">
-        <value>Mərmər, Qranit, Seramik satışı və Ağlay işləri </value>
+        <value>Mərmər, Qranit, Seramik satışı və fasad işləri </value>
     </data>
     <data name="question" xml:space="preserve">
         <value>Sualınız var?</value>
@@ -68,5 +68,11 @@
     </data>
     <data name="services" xml:space="preserve">
         <value>Xidmətlərimiz</value>
+    </data>
+    <data name="sub-design" xml:space="preserve">
+        <value>Evinizin və ya obyektlərinizin daxili və xarici dizaynı yüksək təcrübəyə malik memarlarımız tərəfindən sizin istəkləriniziə görə hazırlanır.</value>
+    </data>
+    <data name="sub-cut" xml:space="preserve">
+        <value>Evinizin və ya obyektlərinizin daxili və xarici dizaynı yüksək təcrübəyə malik memarlarımız tərəfindən incəliklə işlənir və sizə təhvil verilir.</value>
     </data>
 </root>

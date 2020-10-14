@@ -146,5 +146,17 @@ namespace acreator_front.Resources.Pages {
                 return ResourceManager.GetString("services", resourceCulture);
             }
         }
+        
+        internal static string sub_design {
+            get {
+                return ResourceManager.GetString("sub-design", resourceCulture);
+            }
+        }
+        
+        internal static string sub_cut {
+            get {
+                return ResourceManager.GetString("sub-cut", resourceCulture);
+            }
+        }
     }
 }

@@ -37,7 +37,7 @@
         <value>Язык</value>
     </data>
     <data name="title" xml:space="preserve">
-        <value>Продажа изделий из мрамора, гранита, керамики и глины</value>
+        <value>Продажа мрамора, гранита, керамики и фасадных работ</value>
     </data>
     <data name="question" xml:space="preserve">
         <value>У вас есть вопрос?</value>
@@ -61,12 +61,18 @@
         <value>Дизайн</value>
     </data>
     <data name="cut" xml:space="preserve">
-        <value>cut russian</value>
+        <value>Порез</value>
     </data>
     <data name="support" xml:space="preserve">
         <value>support russian</value>
     </data>
     <data name="services" xml:space="preserve">
         <value>Сервисы</value>
+    </data>
+    <data name="sub-design" xml:space="preserve">
+        <value>Дизайн интерьера и экстерьера вашего дома или помещений выполнен нашими опытными архитекторами в соответствии с вашими пожеланиями.</value>
+    </data>
+    <data name="sub-cut" xml:space="preserve">
+        <value>Дизайн интерьера и экстерьера вашего дома или помещений тщательно разработан и предоставлен вам нашими опытными архитекторами.</value>
     </data>
 </root>

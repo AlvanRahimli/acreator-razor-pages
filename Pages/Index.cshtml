@@ -117,7 +117,7 @@
                             <div class="icon">
                                 <i class="icon-phone-1"></i>
                                 <div class="content">
-                                    <h3>(+99450)325-76-60</h3>
+                                    <h3>(+99450)800-01-66</h3>
                                     <p>info@acreator.az</p>
                                 </div>
                             </div>
@@ -127,7 +127,7 @@
                             <div class="icon">
                                 <i class="icon-location"></i>
                                 <div class="content">
-                                    <h3># UNVAN #</h3>
+                                    <h3>(+99450)325-76-60</h3>
                                     <p>Bakı / Azerbaycan</p>
                                 </div>
                             </div>
@@ -176,20 +176,20 @@
                             <li class="dropdown"><a href="#" class="dropdown-toggle js-activated">@Localizer["nav-selectLang"]</a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#">
+                                        <a href="?culture=az">
                                             <img src="images/flag/azerbaijan.svg" width="20px"
                                                 height="20px" alt="" class="languageicon"><span class="lanicon">AZ</span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="?culture=en">
                                             <img src="images/flag/england.svg" width="20px"
                                                 height="20px" alt="" class="languageicon">
                                             <span
                                                 class="lanicon">EN</span></a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="?culture=ru">
                                             <img src="images/flag/russia.svg" width="20px" height="20px"
                                                 alt="" class="languageicon"><span class="lanicon">RU</span> </a>
                                     </li>
@@ -225,9 +225,8 @@
                             {@foreach (var img in images)
                             {
                                 <li data-transition="fade">
-                                    @* <img src="https://acreator.az/api/@img.Url" alt="@img.Alt" /> *@
-                                    <img src="https://acreator.az/api/Resources/Images/granit4676.jpeg" alt="@img.Alt" />
-
+                                    <img src="https://acreator.az/api/@img.Url" alt="@img.Alt" />
+                                    @* <img src="https://acreator.az/api/Resources/Images/granit4676.jpeg" alt="@img.Alt" /> *@
                                     <div class="caption sfr upper" data-x="10" data-y="200" data-speed="300" data-start="1200"
                                         data-easing="Sine.easeOut">
                                         <h3>ACreator</h3>
@@ -293,7 +292,7 @@
                                 <div class="services-box-2">
                                     <div class="content">
                                         <p class="b-mgr20">
-                                            <img src="images/gallery/p5.jpeg" class="pic" alt="">
+                                            <img src="images/gallery/p51.jpeg" class="pic" alt="">
                                         </p>
                                         <h3 class="introtitles">Marbel</h3>
                                     </div>
@@ -360,9 +359,7 @@
                                 <div class="content">
                                     <h3>@Localizer["design"]</h3>
                                     <p>
-                                        Dizaynda, fakturada və rəngdə təbii və süni daşların əhəmiyyətli payını nəzərə
-                                        alaraq bəzən ən gözəl daşlar düzgün istifadə edilmədiyi təqdirdə narahat və
-                                        arzuolunmaz bir mühitdə yer dəyişdirə bilər.
+                                        @Localizer["sub-design"]
                                     </p>
                                 </div>
                             </div>
@@ -372,24 +369,10 @@
                                 <div class="content">
                                     <h3>@Localizer["cut"]</h3>
                                     <p>
-                                        Müştəri dizayn işlərini tamamladıqdan və son layihəni
-                                        dəqiqləşdirdikdən sonra, mexaniki kəsmə əməliyyatları dünyanın ən dəqiq müasir
-                                        avadanlıqlarından istifadə etməklə mexanikləşdirilmiş əsasda aparılır.
+                                        @Localizer["sub-cut"]
                                     </p>
                                 </div>
                             </div>
-
-                            <div class="services-box-2 left">
-                                <i class="icon-picons-close"></i>
-                                <div class="content">
-                                    <h3>@Localizer["support"]</h3>
-                                    <p>
-                                        Səthləri təmizləmək üçün heç vaxt ağ, kaustik soda, cilalar və xlorlu
-                                        həlledicilər kimi kimyəvi maddələrdən istifadə etməyin
-                                    </p>
-                                </div>
-                            </div>
-
                         </div>
 
 
@@ -462,7 +445,7 @@
                     <div class="row col-md-12">
                         <h2 class="text-center">ACreator</h2>
                         <h1 class="text-center parallaxtitle">
-                            @Localizer["short-info"]
+                            @Localizer["title"]
                         </h1>
 
                     </div>
@@ -524,11 +507,11 @@
                                         <ul class="list-inline">
                                             <li class="list-inline-item p-2">
                                                 <img src="icon/map-marker-alt-solid.svg"
-                                                     class="mapsicon" alt=""><span># UNVAN #</span>
+                                                     class="mapsicon" alt=""><span>Bakı, Azərbaycan</span>
                                             </li>
                                             <li class="list-inline-item">
                                                 <img src="icon/phone-alt-solid.svg"
-                                                     class="phoneicon" alt=""><span class="ml-2"># TELEFON #</span>
+                                                     class="phoneicon" alt=""><span class="ml-2">(+99450)800-01-66</span>
                                             </li>
                                         </ul>
                                     </div>
